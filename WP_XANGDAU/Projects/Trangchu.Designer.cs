@@ -990,10 +990,10 @@ namespace XANGDAU
             "Họng 6 RON95",
             "Họng 7 E5",
             "Họng 8 E5"});
-            this.cbTankSelect.Location = new System.Drawing.Point(197, 181);
+            this.cbTankSelect.Location = new System.Drawing.Point(213, 181);
             this.cbTankSelect.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbTankSelect.Name = "cbTankSelect";
-            this.cbTankSelect.Size = new System.Drawing.Size(158, 28);
+            this.cbTankSelect.Size = new System.Drawing.Size(184, 28);
             this.cbTankSelect.TabIndex = 94;
             this.cbTankSelect.SelectedIndexChanged += new System.EventHandler(this.cbTankSelect_SelectedIndexChanged);
             // 

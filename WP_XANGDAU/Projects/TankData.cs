@@ -9,39 +9,41 @@ using S7.Net;
 
 namespace XANGDAU
 {
+
     public class TankData
     {
+        public struct throat_t
+        {
+            public string DB;
+            public double Start;
+            public double Stop;
+            public double Enable;
+            public double PS;
+            public double Setpoint;
+            public double Ready;
+            public double Running;
+            public double Vout;
+            public double Ctrlvalue;
+        } 
         //variable
         public string DB;
         public double TankHeight;
         public double TankBaseArea;
-        public double TankInitialLevel;
-        public double LevelPER;
+        public double InitialLevel;
         public double Level;
         public double LevelMin;
         public double LevelMax;
         public double Temp;
         public double TempMin;
         public double TempMax;
-        public double FlowInPER;
-        public double FlowIn;
-        public double FlowInMax;
-        public double FlowOutPER;
-        public double FlowOut;
-        public double FlowOutMax;
         public double VCurr;
-        public double Vout;
-        public double BatchControlVal;
-        public double SetpointOut;
-        public bool Enable;
-        public bool BatchReady;
-        public bool BatchRunning;
         public double Price;
         public double PriceTotal;
-        public int LevelStt;            //0: normal     1:low      2:high
+        public int LevelStt;            //0: normal     1:verylow   2:low   3:high    4:veryhigh
         public string LevelSttMessage;
-        public int TempStt;             //0: normal     1:low      2:high
+        public int TempStt;             //0: normal     1:verylow   2:low   3:high    4:veryhigh
         public string TempSttMessage;
+        public throat_t throat1, throat2;
 
         //E5 variable
         public double FlowOutRON92;
@@ -70,15 +72,7 @@ namespace XANGDAU
                     Temp = ((uint)GlobalData.plc.Read(DB + ".DBD28")).ConvertToDouble();
                     TempMin = ((uint)GlobalData.plc.Read(DB + ".DBD32")).ConvertToDouble();
                     TempMax = ((uint)GlobalData.plc.Read(DB + ".DBD36")).ConvertToDouble();
-                    FlowIn = ((uint)GlobalData.plc.Read(DB + ".DBD44")).ConvertToDouble();
-                    FlowOut = ((uint)GlobalData.plc.Read(DB + ".DBD56")).ConvertToDouble();
                     VCurr = ((uint)GlobalData.plc.Read(DB + ".DBD64")).ConvertToDouble();
-                    Vout = ((uint)GlobalData.plc.Read(DB + ".DBD68")).ConvertToDouble();
-                    BatchControlVal = ((uint)GlobalData.plc.Read(DB + ".DBD72")).ConvertToDouble();
-                    SetpointOut = ((uint)GlobalData.plc.Read(DB + ".DBD76")).ConvertToDouble();
-                    Enable = (bool)GlobalData.plc.Read(DB + ".DBX80.2");
-                    BatchReady = (bool)GlobalData.plc.Read(DB + ".DBX80.3");
-                    BatchRunning = (bool)GlobalData.plc.Read(DB + ".DBX80.4");
                     Price = ((uint)GlobalData.plc.Read(DB + ".DBD82")).ConvertToDouble();
 
                     GlobalData.CheckData = true;
@@ -99,7 +93,7 @@ namespace XANGDAU
 
         public void ProcessData()
         {
-            PriceTotal = Price * SetpointOut;
+            //PriceTotal = Price * SetpointOut;
             //level
             if (Level < LevelMin)
             {
@@ -143,13 +137,8 @@ namespace XANGDAU
                     FlowOutRON92 = ((uint)GlobalData.plc.Read(DB + ".DBD0")).ConvertToDouble();
                     FlowOutE100 = ((uint)GlobalData.plc.Read(DB + ".DBD4")).ConvertToDouble();
                     VCurr = ((uint)GlobalData.plc.Read(DB + ".DBD8")).ConvertToDouble();
-                    Vout = ((uint)GlobalData.plc.Read(DB + ".DBD12")).ConvertToDouble();
                     BatchValRON92 = ((uint)GlobalData.plc.Read(DB + ".DBD16")).ConvertToDouble();
                     BatchValE100 = ((uint)GlobalData.plc.Read(DB + ".DBD20")).ConvertToDouble();
-                    SetpointOut = ((uint)GlobalData.plc.Read(DB + ".DBD24")).ConvertToDouble();
-                    Enable = (bool)GlobalData.plc.Read(DB + ".DBX28.2");
-                    BatchReady = (bool)GlobalData.plc.Read(DB + ".DBX28.3");
-                    BatchRunning = (bool)GlobalData.plc.Read(DB + ".DBX28.4");
                     Price = ((uint)GlobalData.plc.Read(DB + ".DBD30")).ConvertToDouble();
 
                     GlobalData.CheckData = true;

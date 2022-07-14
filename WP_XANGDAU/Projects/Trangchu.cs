@@ -141,7 +141,7 @@ namespace XANGDAU
 
         private void EditDataName()
         {
-            if (GlobalData.TankIndex != 3)
+            if (GlobalData.TankIndex != 6 && GlobalData.TankIndex != 7)
             {
                 lb4.Text = "Máy bơm:";
                 lb5.Text = "Trạng thái:";
@@ -170,24 +170,23 @@ namespace XANGDAU
 
                     lbLevel2.Text = String.Format("{0:0.0}m", obj.Level);
                     lbTemp2.Text = String.Format("{0:0.0}°C", obj.Temp);
-                    lbValveOut2.Text = String.Format("{0:0}%", obj.BatchControlVal * 10);
-                    lbFlowIn2.Text = String.Format("{0:0}l/s", obj.FlowIn);
-                    lbFlowOut2.Text = String.Format("{0:0}l/s", obj.FlowOut);
+                    //lbValveOut2.Text = String.Format("{0:0}%", obj.BatchControlVal * 10);
+                    //lbFlowOut2.Text = String.Format("{0:0}l/s", obj.FlowOut);
                     UpdateLevel((int)(obj.Level * 100 / obj.TankHeight));
 
-                    lbVout.Text = String.Format("{0:0.0}", obj.Vout);
+                    //lbVout.Text = String.Format("{0:0.0}", obj.Vout);
                     //lbDongia.Text = ((int)obj.Price).ToString();
                     //lbThanhtien.Text = ((int)obj.PriceTotal).ToString();
 
                     txt1.Text = obj.TempSttMessage;
                     txt2.Text = obj.LevelSttMessage;
-                    txt3.Text = obj.Enable ? "sẵn sàng" : "chưa hoạt động";
-                    txt4.Text = obj.BatchRunning ? "đang chạy" : "chưa hoạt động";
+                    //txt3.Text = obj.Enable ? "sẵn sàng" : "chưa hoạt động";
+                    //txt4.Text = obj.BatchRunning ? "đang chạy" : "chưa hoạt động";
                     txt5.Text = txt4.Text;
 
                     txt2.BackColor = obj.LevelStt == 0 ? Color.WhiteSmoke : Color.FromArgb(255, 60, 60);
                     txt1.BackColor = obj.TempStt == 0 ? Color.WhiteSmoke : Color.FromArgb(255, 60, 60);
-                    txt3.BackColor = obj.Enable ? Color.WhiteSmoke : Color.FromArgb(255, 60, 60);
+                    //txt3.BackColor = obj.Enable ? Color.WhiteSmoke : Color.FromArgb(255, 60, 60);
                     lbTemp2.BackColor = txt1.BackColor;
                     lbLevel2.BackColor = txt2.BackColor;
                 }
@@ -197,18 +196,16 @@ namespace XANGDAU
                     UpdateLevelRON92((int)(GlobalData.RON92.Level * 100 / GlobalData.RON92.TankHeight));
                     UpdateLevelE100((int)(GlobalData.E100.Level * 100 / GlobalData.E100.TankHeight));
 
-                    lbE5RON92FlowIn.Text = String.Format("{0:0}l/s", GlobalData.RON92.FlowIn);
                     lbE5RON92Temp.Text = String.Format("{0:0.0}°C", GlobalData.RON92.Temp);
                     lbE5RON92Level.Text = String.Format("{0:0.0}m", GlobalData.RON92.Level);
                     lbE5RON92Valve.Text = String.Format("{0:0}%", GlobalData.E5.BatchValRON92 * 10);
                     lbE5RON92FlowOut.Text = String.Format("{0:0}l/s", GlobalData.E5.FlowOutRON92);
 
-                    lbE5E100FlowIn.Text = String.Format("{0:0}l/s", GlobalData.E100.FlowIn);
                     lbE5E100Temp.Text = String.Format("{0:0.0}°C", GlobalData.E100.Temp);
                     lbE5E100Level.Text = String.Format("{0:0.0}m", GlobalData.E100.Level);
                     lbE5E100Valve.Text = String.Format("{0:0}%", GlobalData.E5.BatchValE100 * 10);
                     lbE5E100FlowOut.Text = String.Format("{0:0}l/s", GlobalData.E5.FlowOutE100);
-                    lbE5Valve3.Text = GlobalData.E5.BatchRunning ? "100%" : "0%";
+                    //lbE5Valve3.Text = GlobalData.E5.BatchRunning ? "100%" : "0%";
 
                     lbE5RON92Temp.BackColor = GlobalData.RON92.TempStt == 0 ? Color.WhiteSmoke : Color.FromArgb(255, 60, 60);
                     lbE5E100Temp.BackColor = GlobalData.E100.TempStt == 0 ? Color.WhiteSmoke : Color.FromArgb(255, 60, 60);
@@ -217,11 +214,11 @@ namespace XANGDAU
                     lbE5E100Level.BackColor = GlobalData.E100.LevelStt == 0 ? Color.WhiteSmoke : Color.FromArgb(255, 60, 60);
                     txt2.BackColor = obj.LevelStt == 0 ? Color.WhiteSmoke : Color.FromArgb(255, 60, 60);
 
-                    lbVout.Text = String.Format("{0:0.0}", obj.Vout);
+                    //lbVout.Text = String.Format("{0:0.0}", obj.Vout);
                     //lbDongia.Text = ((int)obj.Price).ToString();
                     //lbThanhtien.Text = ((int)obj.PriceTotal).ToString();
-                    txt3.Text = obj.Enable ? "sẵn sàng" : "chưa hoạt động";
-                    txt4.Text = obj.BatchRunning ? "đang chạy" : "chưa hoạt động";
+                    //txt3.Text = obj.Enable ? "sẵn sàng" : "chưa hoạt động";
+                    //txt4.Text = obj.BatchRunning ? "đang chạy" : "chưa hoạt động";
                     txt5.Text = txt4.Text;
                     txt6.Text = txt4.Text;
                     txt2.Text = obj.LevelSttMessage;
@@ -235,19 +232,16 @@ namespace XANGDAU
                     lbLevel2.Text = "----";
                     lbTemp2.Text = "----";
                     lbValveOut2.Text = "----";
-                    lbFlowIn2.Text = "----";
                     lbFlowOut2.Text = "----";
                     UpdateLevel(0);
                 }
                 else
                 {
-                    lbE5RON92FlowIn.Text = "----";
                     lbE5RON92Temp.Text = "----";
                     lbE5RON92Level.Text = "----";
                     lbE5RON92Valve.Text = "----";
                     lbE5RON92FlowOut.Text = "----";
 
-                    lbE5E100FlowIn.Text = "----";
                     lbE5E100Temp.Text = "----";
                     lbE5E100Level.Text = "----";
                     lbE5E100Valve.Text = "----";
@@ -276,8 +270,6 @@ namespace XANGDAU
 
             btStart.Enabled = GlobalData.plcConnectd;
             btEstop.Enabled = GlobalData.plcConnectd;
-            btStartnhap.Enabled = GlobalData.plcConnectd;
-            btEstopnhap.Enabled = GlobalData.plcConnectd;
             //tbIDdonhang.Enabled = GlobalData.plcConnectd;
         }
 
@@ -417,13 +409,12 @@ namespace XANGDAU
 
         private void cbTankSelect_SelectedIndexChanged(object sender, EventArgs e)
         {
-
-            if (cbTankSelect.SelectedIndex != 3)
+            panelSingleTank.Visible = cbTankSelect.SelectedIndex != 6 && cbTankSelect.SelectedIndex != 7;
+            if (panelSingleTank.Visible)
             {
-                lbTankName.Text = cbTankSelect.Text;
+                lbTankName.Text = cbTankSelect.Text.Split(' ')[2];
                 lbTankName.Location = new Point(picTank.Location.X + picTank.Width / 2 - lbTankName.Width / 2, lbTankName.Location.Y);
             }
-            panelSingleTank.Visible = cbTankSelect.SelectedIndex != 3;
 
             GlobalData.TankIndex = cbTankSelect.SelectedIndex;
 
@@ -459,37 +450,6 @@ namespace XANGDAU
                 {
                     MessageBox.Show("Lỗi kết nối với SQL Server: " + ex.Message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     tbIDdonhang.Text = "";
-                }
-            }
-        }
-
-        private void tbIDdonhangnhap_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                try
-                {
-                    string[] product = { "Diezel", "RON 95", "RON 92", "E5" };
-                    SqlDataReader data = GlobalFunction.ReadDataFromSQL("*", "DonHang", "WHERE MaDon = N'" + tbIDdonhangnhap.Text + "' AND LoaiDon = N'Nhập' AND SanPham = N'" + product[GlobalData.TankIndex] + "'");
-                    if (data != null)
-                    {
-                        lbSetpointnhap.Text = data[4].ToString();
-                        lbDongianhap.Text = data[5].ToString();
-                        lbThanhtiennhap.Text = data[6].ToString();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Mã đơn không tồn tại!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        tbIDdonhangnhap.Text = "";
-                        lbSetpointnhap.Text = "0";
-                        lbDongianhap.Text = "0";
-                        lbThanhtiennhap.Text = "0";
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Lỗi kết nối với SQL Server: " + ex.Message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    tbIDdonhangnhap.Text = "";
                 }
             }
         }
