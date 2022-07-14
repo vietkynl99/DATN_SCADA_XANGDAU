@@ -1,0 +1,8 @@
+C:\Users\anmay\OneDrive\Documents\CSharp\MET_System\nhandulieuCOM\obj\x86\Release\MET_System.csprojAssemblyReference.cache
+C:\Users\anmay\OneDrive\Documents\CSharp\MET_System\nhandulieuCOM\obj\x86\Release\nhandulieuCOM.Properties.Resources.resources
+C:\Users\anmay\OneDrive\Documents\CSharp\MET_System\nhandulieuCOM\obj\x86\Release\MET_System.csproj.GenerateResource.cache
+C:\Users\anmay\OneDrive\Documents\CSharp\MET_System\nhandulieuCOM\obj\x86\Release\MET_System.csproj.CoreCompileInputs.cache
+C:\Users\anmay\OneDrive\Documents\CSharp\MET_System\nhandulieuCOM\obj\x86\Release\nhandulieuCOM.exe
+C:\Users\anmay\OneDrive\Documents\CSharp\MET_System\nhandulieuCOM\obj\x86\Release\nhandulieuCOM.pdb
+C:\Users\anmay\OneDrive\Documents\CSharp\MET_System\nhandulieuCOM\bin\Release\nhandulieuCOM.exe
+C:\Users\anmay\OneDrive\Documents\CSharp\MET_System\nhandulieuCOM\bin\Release\nhandulieuCOM.pdb
