@@ -159,6 +159,7 @@ namespace XANGDAU
             this.TextboxIP.Name = "TextboxIP";
             this.TextboxIP.Size = new System.Drawing.Size(240, 27);
             this.TextboxIP.TabIndex = 51;
+            this.TextboxIP.Text = "192.168.0.1";
             this.TextboxIP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // PLCStatus

@@ -13,11 +13,11 @@ namespace XANGDAU
     class GlobalData
     {
 
-        static public TankData Diezel = new TankData("DB3");
-        static public TankData RON95 = new TankData("DB4");
-        static public TankData RON92 = new TankData("DB5");
-        static public TankData E100 = new TankData("DB6");
-        static public TankData E5 = new TankData("DB7");
+        static public TankData Diezel = new TankData("Diezel", "DB5", "DB1", "DB2", "DB7", "DB6");
+        static public TankData RON95 = new TankData("RON 95", "DB5", "DB1", "DB2", "DB7", "DB6");
+        static public TankData RON92 = new TankData("RON 92", "DB5", "DB1", "DB2", "DB7", "DB6");
+        static public TankData E100 = new TankData("E100", "DB5", "DB1", "DB2", "DB7", "DB6");
+        static public TankData E5 = new TankData("E5", "DB5", "DB1", "DB2", "DB7", "DB6");
         static public int TankIndex = 0;    //diezel
 
         //biến để kiểm soát form được mở

@@ -16,7 +16,7 @@ namespace XANGDAU
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new DangnhapForm());
+            Application.Run(new MainForm());
         }
     }
 }

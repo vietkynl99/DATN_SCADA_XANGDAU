@@ -250,30 +250,27 @@ namespace XANGDAU
                 //get data từ PLC
                 try
                 {
-                    if (GlobalData.TankIndex == 0)
+                    switch(GlobalData.TankIndex)
                     {
-                        GlobalData.Diezel.ReadData();
-                        GlobalData.Diezel.ProcessData();
-                    }
-                    else if (GlobalData.TankIndex == 1)
-                    {
-                        GlobalData.RON95.ReadData();
-                        GlobalData.RON95.ProcessData();
-                    }
-                    else if (GlobalData.TankIndex == 2)
-                    {
-                        GlobalData.RON92.ReadData();
-                        GlobalData.RON92.ProcessData();
-                    }
-                    else
-                    {
-                        GlobalData.RON92.ReadData();
-                        GlobalData.RON92.ProcessData();
-                        GlobalData.E100.ReadData();
-                        GlobalData.E100.ProcessData();
-                        GlobalData.E5.ReadDataE5();
-                        GlobalData.E5.ProcessDataE5();
-                    }
+                        case 0: 
+                        case 1:
+                            GlobalData.Diezel.ReadData();
+                            break;
+                        case 2: 
+                        case 3:
+                            GlobalData.RON92.ReadData();
+                            break;
+                        case 4:
+                        case 5:
+                            GlobalData.RON95.ReadData();
+                            break;
+                        default:
+                            GlobalData.E100.ReadData();
+                            GlobalData.RON92.ReadData();
+                            GlobalData.E5.ReadData();
+                            break;
+
+                    }    
 
                     GlobalData.CheckData = true;
                 }

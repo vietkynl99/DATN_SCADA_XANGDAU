@@ -109,6 +109,10 @@ namespace XANGDAU
             this.lb1 = new System.Windows.Forms.Label();
             this.pictureBox19 = new System.Windows.Forms.PictureBox();
             this.groupboxPLC = new System.Windows.Forms.GroupBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.lbT = new System.Windows.Forms.Label();
+            this.lbThoigian = new System.Windows.Forms.Label();
+            this.lbTrangthai = new System.Windows.Forms.Label();
             this.lbSetpoint = new System.Windows.Forms.Label();
             this.tbIDdonhang = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
@@ -1026,7 +1030,7 @@ namespace XANGDAU
             this.groupBox1.Controls.Add(this.lb1);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.groupBox1.Location = new System.Drawing.Point(893, 385);
+            this.groupBox1.Location = new System.Drawing.Point(893, 457);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -1188,6 +1192,10 @@ namespace XANGDAU
             // groupboxPLC
             // 
             this.groupboxPLC.BackColor = System.Drawing.Color.Transparent;
+            this.groupboxPLC.Controls.Add(this.label9);
+            this.groupboxPLC.Controls.Add(this.lbT);
+            this.groupboxPLC.Controls.Add(this.lbThoigian);
+            this.groupboxPLC.Controls.Add(this.lbTrangthai);
             this.groupboxPLC.Controls.Add(this.lbSetpoint);
             this.groupboxPLC.Controls.Add(this.tbIDdonhang);
             this.groupboxPLC.Controls.Add(this.label14);
@@ -1206,17 +1214,63 @@ namespace XANGDAU
             this.groupboxPLC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupboxPLC.Name = "groupboxPLC";
             this.groupboxPLC.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupboxPLC.Size = new System.Drawing.Size(403, 328);
+            this.groupboxPLC.Size = new System.Drawing.Size(403, 408);
             this.groupboxPLC.TabIndex = 73;
             this.groupboxPLC.TabStop = false;
             this.groupboxPLC.Text = "Xuất";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Gainsboro;
+            this.label9.Location = new System.Drawing.Point(21, 247);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(82, 20);
+            this.label9.TabIndex = 95;
+            this.label9.Text = "Thời gian:";
+            // 
+            // lbT
+            // 
+            this.lbT.AutoSize = true;
+            this.lbT.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbT.ForeColor = System.Drawing.Color.Gainsboro;
+            this.lbT.Location = new System.Drawing.Point(21, 215);
+            this.lbT.Name = "lbT";
+            this.lbT.Size = new System.Drawing.Size(89, 20);
+            this.lbT.TabIndex = 94;
+            this.lbT.Text = "Trạng thái:";
+            // 
+            // lbThoigian
+            // 
+            this.lbThoigian.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.lbThoigian.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbThoigian.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.lbThoigian.Location = new System.Drawing.Point(169, 244);
+            this.lbThoigian.Name = "lbThoigian";
+            this.lbThoigian.Size = new System.Drawing.Size(216, 27);
+            this.lbThoigian.TabIndex = 92;
+            this.lbThoigian.Text = "----";
+            this.lbThoigian.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbTrangthai
+            // 
+            this.lbTrangthai.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.lbTrangthai.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTrangthai.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.lbTrangthai.Location = new System.Drawing.Point(169, 209);
+            this.lbTrangthai.Name = "lbTrangthai";
+            this.lbTrangthai.Size = new System.Drawing.Size(216, 27);
+            this.lbTrangthai.TabIndex = 93;
+            this.lbTrangthai.Text = "----";
+            this.lbTrangthai.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbSetpoint
             // 
             this.lbSetpoint.BackColor = System.Drawing.Color.WhiteSmoke;
             this.lbSetpoint.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbSetpoint.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.lbSetpoint.Location = new System.Drawing.Point(168, 68);
+            this.lbSetpoint.Location = new System.Drawing.Point(168, 69);
             this.lbSetpoint.Name = "lbSetpoint";
             this.lbSetpoint.Size = new System.Drawing.Size(216, 27);
             this.lbSetpoint.TabIndex = 91;
@@ -1241,7 +1295,7 @@ namespace XANGDAU
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label14.Location = new System.Drawing.Point(11, 34);
+            this.label14.Location = new System.Drawing.Point(21, 35);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(69, 20);
             this.label14.TabIndex = 89;
@@ -1252,7 +1306,7 @@ namespace XANGDAU
             this.lbThanhtien.BackColor = System.Drawing.Color.WhiteSmoke;
             this.lbThanhtien.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbThanhtien.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.lbThanhtien.Location = new System.Drawing.Point(168, 171);
+            this.lbThanhtien.Location = new System.Drawing.Point(168, 174);
             this.lbThanhtien.Name = "lbThanhtien";
             this.lbThanhtien.Size = new System.Drawing.Size(216, 27);
             this.lbThanhtien.TabIndex = 88;
@@ -1264,7 +1318,7 @@ namespace XANGDAU
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label7.Location = new System.Drawing.Point(15, 160);
+            this.label7.Location = new System.Drawing.Point(21, 163);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(106, 40);
             this.label7.TabIndex = 87;
@@ -1275,7 +1329,7 @@ namespace XANGDAU
             this.lbDongia.BackColor = System.Drawing.Color.WhiteSmoke;
             this.lbDongia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbDongia.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.lbDongia.Location = new System.Drawing.Point(168, 136);
+            this.lbDongia.Location = new System.Drawing.Point(168, 139);
             this.lbDongia.Name = "lbDongia";
             this.lbDongia.Size = new System.Drawing.Size(216, 27);
             this.lbDongia.TabIndex = 88;
@@ -1287,7 +1341,7 @@ namespace XANGDAU
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label5.Location = new System.Drawing.Point(15, 130);
+            this.label5.Location = new System.Drawing.Point(21, 131);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(133, 20);
             this.label5.TabIndex = 87;
@@ -1298,7 +1352,7 @@ namespace XANGDAU
             this.lbVout.BackColor = System.Drawing.Color.WhiteSmoke;
             this.lbVout.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbVout.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.lbVout.Location = new System.Drawing.Point(168, 100);
+            this.lbVout.Location = new System.Drawing.Point(168, 104);
             this.lbVout.Name = "lbVout";
             this.lbVout.Size = new System.Drawing.Size(216, 27);
             this.lbVout.TabIndex = 86;
@@ -1310,7 +1364,7 @@ namespace XANGDAU
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label3.Location = new System.Drawing.Point(15, 98);
+            this.label3.Location = new System.Drawing.Point(21, 99);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(92, 20);
             this.label3.TabIndex = 85;
@@ -1323,7 +1377,7 @@ namespace XANGDAU
             this.btEstop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btEstop.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btEstop.ForeColor = System.Drawing.Color.White;
-            this.btEstop.Location = new System.Drawing.Point(19, 274);
+            this.btEstop.Location = new System.Drawing.Point(20, 353);
             this.btEstop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btEstop.Name = "btEstop";
             this.btEstop.Size = new System.Drawing.Size(365, 34);
@@ -1338,7 +1392,7 @@ namespace XANGDAU
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label8.Location = new System.Drawing.Point(11, 66);
+            this.label8.Location = new System.Drawing.Point(21, 67);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(101, 20);
             this.label8.TabIndex = 50;
@@ -1351,7 +1405,7 @@ namespace XANGDAU
             this.btStart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btStart.ForeColor = System.Drawing.Color.White;
-            this.btStart.Location = new System.Drawing.Point(19, 228);
+            this.btStart.Location = new System.Drawing.Point(20, 307);
             this.btStart.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btStart.Name = "btStart";
             this.btStart.Size = new System.Drawing.Size(365, 34);
@@ -1634,5 +1688,9 @@ namespace XANGDAU
         private System.Windows.Forms.Label lbSetpoint;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox tbIDdonhang;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lbT;
+        private System.Windows.Forms.Label lbThoigian;
+        private System.Windows.Forms.Label lbTrangthai;
     }
 }

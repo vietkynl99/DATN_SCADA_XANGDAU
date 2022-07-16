@@ -141,7 +141,7 @@ namespace XANGDAU
 
         private void EditDataName()
         {
-            if (GlobalData.TankIndex != 6 && GlobalData.TankIndex != 7)
+            if (GlobalData.TankIndex < 6)
             {
                 lb4.Text = "Máy bơm:";
                 lb5.Text = "Trạng thái:";
@@ -165,32 +165,31 @@ namespace XANGDAU
             if (GlobalData.plcConnectd)
             {
                 EditDataName();
-                if (GlobalData.TankIndex != 3)
+                if (GlobalData.TankIndex < 6)
                 {
+                    TankData.throat_t throat = GlobalData.TankIndex % 2 == 0 ? obj.throat1 : obj.throat2;
 
                     lbLevel2.Text = String.Format("{0:0.0}m", obj.Level);
                     lbTemp2.Text = String.Format("{0:0.0}°C", obj.Temp);
-                    //lbValveOut2.Text = String.Format("{0:0}%", obj.BatchControlVal * 10);
-                    //lbFlowOut2.Text = String.Format("{0:0}l/s", obj.FlowOut);
+                    lbValveOut2.Text = String.Format("{0:0}%", throat.Ctrlvalue);
+                    lbFlowOut2.Text = String.Format("{0:0}m3/h", throat.Flow);
                     UpdateLevel((int)(obj.Level * 100 / obj.TankHeight));
 
-                    //lbVout.Text = String.Format("{0:0.0}", obj.Vout);
-                    //lbDongia.Text = ((int)obj.Price).ToString();
-                    //lbThanhtien.Text = ((int)obj.PriceTotal).ToString();
+                    lbVout.Text = String.Format("{0:0.0}", throat.Vout);
 
                     txt1.Text = obj.TempSttMessage;
                     txt2.Text = obj.LevelSttMessage;
-                    //txt3.Text = obj.Enable ? "sẵn sàng" : "chưa hoạt động";
-                    //txt4.Text = obj.BatchRunning ? "đang chạy" : "chưa hoạt động";
+                    txt3.Text = throat.Enable != 0 ? "sẵn sàng" : "chưa hoạt động";
+                    txt4.Text = throat.Running != 0 ? "đang chạy" : "chưa hoạt động";
                     txt5.Text = txt4.Text;
 
-                    txt2.BackColor = obj.LevelStt == 0 ? Color.WhiteSmoke : Color.FromArgb(255, 60, 60);
-                    txt1.BackColor = obj.TempStt == 0 ? Color.WhiteSmoke : Color.FromArgb(255, 60, 60);
-                    //txt3.BackColor = obj.Enable ? Color.WhiteSmoke : Color.FromArgb(255, 60, 60);
+                    txt2.BackColor = obj.LevelStt == 2 ? Color.WhiteSmoke : Color.FromArgb(255, 60, 60);
+                    txt1.BackColor = obj.TempStt == 2 ? Color.WhiteSmoke : Color.FromArgb(255, 60, 60);
+                    txt3.BackColor = throat.Enable != 0 ? Color.WhiteSmoke : Color.FromArgb(255, 60, 60);
                     lbTemp2.BackColor = txt1.BackColor;
                     lbLevel2.BackColor = txt2.BackColor;
                 }
-                else
+                else   //E5
                 {
 
                     UpdateLevelRON92((int)(GlobalData.RON92.Level * 100 / GlobalData.RON92.TankHeight));
@@ -207,11 +206,11 @@ namespace XANGDAU
                     lbE5E100FlowOut.Text = String.Format("{0:0}l/s", GlobalData.E5.FlowOutE100);
                     //lbE5Valve3.Text = GlobalData.E5.BatchRunning ? "100%" : "0%";
 
-                    lbE5RON92Temp.BackColor = GlobalData.RON92.TempStt == 0 ? Color.WhiteSmoke : Color.FromArgb(255, 60, 60);
-                    lbE5E100Temp.BackColor = GlobalData.E100.TempStt == 0 ? Color.WhiteSmoke : Color.FromArgb(255, 60, 60);
+                    lbE5RON92Temp.BackColor = GlobalData.RON92.TempStt == 2 ? Color.WhiteSmoke : Color.FromArgb(255, 60, 60);
+                    lbE5E100Temp.BackColor = GlobalData.E100.TempStt == 2 ? Color.WhiteSmoke : Color.FromArgb(255, 60, 60);
                     txt1.BackColor = obj.TempStt == 0 ? Color.WhiteSmoke : Color.FromArgb(255, 60, 60);
-                    lbE5RON92Level.BackColor = GlobalData.RON92.LevelStt == 0 ? Color.WhiteSmoke : Color.FromArgb(255, 60, 60);
-                    lbE5E100Level.BackColor = GlobalData.E100.LevelStt == 0 ? Color.WhiteSmoke : Color.FromArgb(255, 60, 60);
+                    lbE5RON92Level.BackColor = GlobalData.RON92.LevelStt == 2 ? Color.WhiteSmoke : Color.FromArgb(255, 60, 60);
+                    lbE5E100Level.BackColor = GlobalData.E100.LevelStt == 2 ? Color.WhiteSmoke : Color.FromArgb(255, 60, 60);
                     txt2.BackColor = obj.LevelStt == 0 ? Color.WhiteSmoke : Color.FromArgb(255, 60, 60);
 
                     //lbVout.Text = String.Format("{0:0.0}", obj.Vout);
@@ -227,7 +226,7 @@ namespace XANGDAU
             }
             else
             {
-                if (GlobalData.TankIndex != 3)
+                if (GlobalData.TankIndex < 6)
                 {
                     lbLevel2.Text = "----";
                     lbTemp2.Text = "----";
@@ -252,8 +251,6 @@ namespace XANGDAU
                 }
 
                 lbVout.Text = "----";
-                //lbDongia.Text = "----";
-                //lbThanhtien.Text = "----";
                 txt3.Text = "----";
                 txt4.Text = "----";
                 txt5.Text = "----";
@@ -270,7 +267,6 @@ namespace XANGDAU
 
             btStart.Enabled = GlobalData.plcConnectd;
             btEstop.Enabled = GlobalData.plcConnectd;
-            //tbIDdonhang.Enabled = GlobalData.plcConnectd;
         }
 
         private void UpdateDateAndTime()
@@ -284,14 +280,8 @@ namespace XANGDAU
         //dùng để kiểm tra trạng thái và cập nhật dữ liệu lên màn hình
         private void UpdateData()
         {
-            if (GlobalData.TankIndex == 0)
-                showData(GlobalData.Diezel);
-            else if (GlobalData.TankIndex == 1)
-                showData(GlobalData.RON95);
-            else if (GlobalData.TankIndex == 2)
-                showData(GlobalData.RON92);
-            else
-                showData(GlobalData.E5);
+            TankData[] obj_arr = { GlobalData.Diezel, GlobalData.RON92, GlobalData.RON95, GlobalData.E5 };
+            showData(obj_arr[GlobalData.TankIndex / 2]);
             UpdateSystemStatus();
             UpdateDateAndTime();
 
@@ -304,26 +294,26 @@ namespace XANGDAU
         }
 
         
-        private void getPLCAddress()
+        private void getPLCAddress(TankData obj)
         {
-            if (GlobalData.TankIndex != 3)
+            if(GlobalData.TankIndex % 2 == 0 )  //throat1
             {
-                PLCAddSetpoint = "DB" + (GlobalData.TankIndex + 3).ToString() + ".DBD76";
-                PLCAddStart = "DB" + (GlobalData.TankIndex + 3).ToString() + ".DBX80.0";
-                PLCAddEstop = "DB" + (GlobalData.TankIndex + 3).ToString() + ".DBX80.1";
+                PLCAddSetpoint = obj.throat1.DB_send + ".DBD4";
+                PLCAddStart = obj.throat1.DB_send + ".DBX0.0";
+                PLCAddEstop = obj.throat1.DB_send + ".DBX0.1";
             }
-            else
+            else  //throat2
             {
-                PLCAddSetpoint = "DB7.DBD24";
-                PLCAddStart = "DB7.DBX28.0"; 
-                PLCAddEstop = "DB7.DBX28.1";
+                PLCAddSetpoint = obj.throat2.DB_send + ".DBD4";
+                PLCAddStart = obj.throat2.DB_send + ".DBX0.0";
+                PLCAddEstop = obj.throat2.DB_send + ".DBX0.1";
             }
-
         }
 
         private void btStart_MouseDown(object sender, MouseEventArgs e)
         {
-            getPLCAddress();
+            TankData[] obj_arr = { GlobalData.Diezel, GlobalData.RON92, GlobalData.RON95, GlobalData.E5 };
+            getPLCAddress(obj_arr[GlobalData.TankIndex/2]);
             //đọc giá trị setpoint
             double setpoint=0;
             try
@@ -355,7 +345,8 @@ namespace XANGDAU
 
         private void btStart_MouseUp(object sender, MouseEventArgs e)
         {
-            getPLCAddress();
+            TankData[] obj_arr = { GlobalData.Diezel, GlobalData.RON92, GlobalData.RON95, GlobalData.E5 };
+            getPLCAddress(obj_arr[GlobalData.TankIndex / 2]);
             //check kết nối
             if (!GlobalData.plcConnectd)
             {
@@ -375,7 +366,8 @@ namespace XANGDAU
 
         private void btEstop_MouseDown(object sender, MouseEventArgs e)
         {
-            getPLCAddress();
+            TankData[] obj_arr = { GlobalData.Diezel, GlobalData.RON92, GlobalData.RON95, GlobalData.E5 };
+            getPLCAddress(obj_arr[GlobalData.TankIndex / 2]);
             //ghi giá trị vào plc
             try
             {
@@ -389,7 +381,8 @@ namespace XANGDAU
 
         private void btEstop_MouseUp(object sender, MouseEventArgs e)
         {
-            getPLCAddress();
+            TankData[] obj_arr = { GlobalData.Diezel, GlobalData.RON92, GlobalData.RON95, GlobalData.E5 };
+            getPLCAddress(obj_arr[GlobalData.TankIndex / 2]);
             //check kết nối
             if (!GlobalData.plcConnectd)
             {
@@ -407,8 +400,9 @@ namespace XANGDAU
             }
         }
 
-        private void cbTankSelect_SelectedIndexChanged(object sender, EventArgs e)
+        private void SelectThroatTank(int index)
         {
+            cbTankSelect.SelectedIndex = index;
             panelSingleTank.Visible = cbTankSelect.SelectedIndex != 6 && cbTankSelect.SelectedIndex != 7;
             if (panelSingleTank.Visible)
             {
@@ -420,6 +414,16 @@ namespace XANGDAU
 
             EditDataName();
         }
+        private void cbTankSelect_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SelectThroatTank(cbTankSelect.SelectedIndex);
+            tbIDdonhang.Text = "";
+            lbSetpoint.Text = "0";
+            lbDongia.Text = "0";
+            lbThanhtien.Text = "0";
+            lbTrangthai.Text = "----";
+            lbThoigian.Text = "----";
+        }
 
 
         //nhập mã đơn hàng xong và bấm Enter
@@ -429,13 +433,16 @@ namespace XANGDAU
             {
                 try
                 {
-                    string[] product = { "Diezel", "RON 95", "RON 92", "E5" };
-                    SqlDataReader data = GlobalFunction.ReadDataFromSQL("*", "DonHang", "WHERE MaDon = N'" + tbIDdonhang.Text + "' AND LoaiDon = N'Xuất' AND SanPham = N'" + product[GlobalData.TankIndex] + "'");
+                    SqlDataReader data = GlobalFunction.ReadDataFromSQL("*", "DonHang", "WHERE MaDon = N'" + tbIDdonhang.Text + "'");
                     if (data != null)
                     {
                         lbSetpoint.Text = data[4].ToString();
                         lbDongia.Text = data[5].ToString();
                         lbThanhtien.Text = data[6].ToString();
+                        lbTrangthai.Text = data[7].ToString();
+                        lbThoigian.Text = data[8].ToString();
+                        int throat = Convert.ToInt32(data[3].ToString().Split(' ')[1]);
+                        SelectThroatTank(throat - 1);
                     }   
                     else
                     {
@@ -444,6 +451,8 @@ namespace XANGDAU
                         lbSetpoint.Text = "0";
                         lbDongia.Text = "0";
                         lbThanhtien.Text = "0";
+                        lbTrangthai.Text = "----";
+                        lbThoigian.Text = "----";
                     }    
                 }
                 catch (Exception ex)
