@@ -40,9 +40,7 @@ namespace XANGDAU
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.cbDeleteData = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.lbDeleteData = new System.Windows.Forms.Label();
             this.cbSelectData = new System.Windows.Forms.ComboBox();
             this.cbAutoRefresh = new System.Windows.Forms.CheckBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -149,9 +147,7 @@ namespace XANGDAU
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox2.Controls.Add(this.cbDeleteData);
             this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Controls.Add(this.lbDeleteData);
             this.groupBox2.Controls.Add(this.cbSelectData);
             this.groupBox2.Controls.Add(this.cbAutoRefresh);
             this.groupBox2.Controls.Add(this.label2);
@@ -173,28 +169,6 @@ namespace XANGDAU
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Tìm kiếm";
             // 
-            // cbDeleteData
-            // 
-            this.cbDeleteData.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbDeleteData.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
-            this.cbDeleteData.ForeColor = System.Drawing.Color.Black;
-            this.cbDeleteData.FormattingEnabled = true;
-            this.cbDeleteData.Items.AddRange(new object[] {
-            "Không",
-            "1 ngày trước",
-            "1 tháng trước",
-            "3 tháng trước",
-            "6 tháng trước",
-            "1 năm trước",
-            "2 năm trước",
-            "Toàn bộ"});
-            this.cbDeleteData.Location = new System.Drawing.Point(483, 82);
-            this.cbDeleteData.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cbDeleteData.Name = "cbDeleteData";
-            this.cbDeleteData.Size = new System.Drawing.Size(185, 28);
-            this.cbDeleteData.TabIndex = 20;
-            this.cbDeleteData.SelectedIndexChanged += new System.EventHandler(this.cbDeleteData_SelectedIndexChanged);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -206,18 +180,6 @@ namespace XANGDAU
             this.label1.Size = new System.Drawing.Size(83, 20);
             this.label1.TabIndex = 1;
             this.label1.Text = "Phân loại:";
-            // 
-            // lbDeleteData
-            // 
-            this.lbDeleteData.AutoSize = true;
-            this.lbDeleteData.BackColor = System.Drawing.Color.Transparent;
-            this.lbDeleteData.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbDeleteData.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lbDeleteData.Location = new System.Drawing.Point(368, 86);
-            this.lbDeleteData.Name = "lbDeleteData";
-            this.lbDeleteData.Size = new System.Drawing.Size(101, 20);
-            this.lbDeleteData.TabIndex = 19;
-            this.lbDeleteData.Text = "Xóa sự kiện:";
             // 
             // cbSelectData
             // 
@@ -316,14 +278,13 @@ namespace XANGDAU
             this.btDeleteData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btDeleteData.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btDeleteData.ForeColor = System.Drawing.Color.Black;
-            this.btDeleteData.Location = new System.Drawing.Point(707, 81);
+            this.btDeleteData.Location = new System.Drawing.Point(372, 80);
             this.btDeleteData.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btDeleteData.Name = "btDeleteData";
             this.btDeleteData.Size = new System.Drawing.Size(140, 33);
             this.btDeleteData.TabIndex = 9;
-            this.btDeleteData.Text = "Xóa";
+            this.btDeleteData.Text = "Xóa sự kiện";
             this.btDeleteData.UseVisualStyleBackColor = false;
-            this.btDeleteData.Visible = false;
             this.btDeleteData.Click += new System.EventHandler(this.btDeleteData_Click);
             // 
             // panelDateTimePicker
@@ -460,8 +421,6 @@ namespace XANGDAU
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btSearch;
         private System.Windows.Forms.Label lbSoluongketqua;
-        private System.Windows.Forms.ComboBox cbDeleteData;
-        private System.Windows.Forms.Label lbDeleteData;
         private System.Windows.Forms.Button btDeleteData;
         private System.Windows.Forms.Timer AutoRefreshTimer;
     }

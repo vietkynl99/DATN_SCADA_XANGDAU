@@ -266,6 +266,53 @@ namespace XANGDAU
             app.Quit();
         }
 
+        //xóa dữ liệu bảng theo mốc thời gian trở về trước
+        private int DeleteDataSQL(string tableName, string dateTimeDelete)
+        {
+            int n = 0;
+            try
+            {
+                //tạo kết nỗi
+                sqlCon = new SqlConnection(GlobalData.connectionString);
+                //nếu đang đóng thì mở kết nối
+                if (sqlCon.State == ConnectionState.Closed)
+                    sqlCon.Open();
+                //nếu đã mở kết nối thì đọc dữ liệu
+                if (sqlCon.State == ConnectionState.Open)
+                {
+                    string sqlCmd = "DELETE FROM " + tableName + " WHERE Thoigian <= '" + dateTimeDelete + "'";
+                    SqlCommand cmd = new SqlCommand(@sqlCmd, sqlCon);
+                    //ghi data
+                    n = cmd.ExecuteNonQuery();
+                    sqlCon.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                GlobalData.SystemEnable = false;
+                MessageBox.Show("Lỗi kết nối với SQL Server: " + ex.Message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            //trả về số kết quả đã xóa
+            return n;
+        }
+        private void btDelete_Click(object sender, EventArgs e)
+        {
+            //check quyền quản trị
+            if (GlobalData.UserLevel != "ADMIN")
+                MessageBox.Show("Bạn không đủ quyền để thực hiện chức năng này!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else
+            {
+                DateTime DateTimeDelete = DateTime.Now.AddYears(-2);
+                DialogResult result = MessageBox.Show("Dữ liệu sẽ không thể phục hồi. Bạn có chắc chắn muốn xóa dữ liệu 2 năm về trước không?", "Xóa dữ liệu", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (result == DialogResult.Yes)
+                {
+                    int n = DeleteDataSQL("DonHang", DateTimeDelete.ToString());
+                    GlobalFunction.InsertEventToSQL("Vận hành", "Tài khoản " + GlobalData.UserName + ": đã xóa " + n.ToString() + " dữ liệu từ " + DateTimeDelete.ToString("dd/MM/yyyy hh:mm:ss tt") + " trở về trước");
+                    MessageBox.Show("Đã xóa " + n.ToString() + " dữ liệu!", "Xóa dữ liệu", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+        }
+
         private void btExportToExcel_Click(object sender, EventArgs e)
         {
             //kiểm tra đã có dữ liệu chưa

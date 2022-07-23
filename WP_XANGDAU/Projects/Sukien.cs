@@ -27,16 +27,11 @@ namespace XANGDAU
 
         private void SukienForm_Load(object sender, EventArgs e)
         {
-            //chỉ hiện nút xóa khi là ADMIN
-            lbDeleteData.Enabled = GlobalData.UserLevel == "ADMIN";
-            cbDeleteData.Enabled = GlobalData.UserLevel == "ADMIN";
-            btDeleteData.Enabled = GlobalData.UserLevel == "ADMIN";
 
             //chỉnh các lựa chọn về mặc định
             cbSelectData.SelectedIndex = 3;
             cbSapxepthoigian.SelectedIndex = 0;
             cbSelectDateTime.SelectedIndex = 1;
-            cbDeleteData.SelectedIndex = 0;
             dateTimePickerStart.Value = DateTime.Today;
             dateTimePickerEnd.Value = DateTime.Today;
 
@@ -217,10 +212,6 @@ namespace XANGDAU
                 UploadToListView();
         }
 
-        private void cbDeleteData_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            btDeleteData.Visible = cbDeleteData.SelectedIndex != 0;
-        }
 
         private void cbSapxepthoigian_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -235,42 +226,16 @@ namespace XANGDAU
             //check quyền quản trị
             if (GlobalData.UserLevel != "ADMIN")
             {
-                cbDeleteData.SelectedIndex = 0;
                 MessageBox.Show("Bạn không đủ quyền để thực hiện chức năng này!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
-                string DateTimeDelete = "";
-                switch (cbDeleteData.Text)
-                {
-                    case "Toàn bộ":
-                        DateTimeDelete = DateTime.Now.ToString();
-                        break;
-                    case "1 ngày trước":
-                        DateTimeDelete = DateTime.Now.AddDays(-1).ToString();
-                        break;
-                    case "1 tháng trước":
-                        DateTimeDelete = DateTime.Now.AddMonths(-1).ToString();
-                        break;
-                    case "3 tháng trước":
-                        DateTimeDelete = DateTime.Now.AddMonths(-3).ToString();
-                        break;
-                    case "6 tháng trước":
-                        DateTimeDelete = DateTime.Now.AddMonths(-6).ToString();
-                        break;
-                    case "1 năm trước":
-                        DateTimeDelete = DateTime.Now.AddYears(-1).ToString();
-                        break;
-                    case "2 năm trước":
-                        DateTimeDelete = DateTime.Now.AddYears(-2).ToString();
-                        break;
-                }
-
-                DialogResult result = MessageBox.Show("Dữ liệu sẽ không thể phục hồi. Bạn có chắc chắn muốn xóa không?", "Xóa dữ liệu", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                string DateTimeDelete = DateTime.Now.AddYears(-2).ToString();
+                DialogResult result = MessageBox.Show("Dữ liệu sẽ không thể phục hồi. Bạn có chắc chắn muốn xóa 2 năm về trước không?", "Xóa dữ liệu", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (result == DialogResult.Yes)
                 {
                     int n = DeleteDataSQL("LichsuHD", DateTimeDelete);
-                    GlobalFunction.InsertEventToSQL("Vận hành", "Tài khoản " + GlobalData.UserName + ": đã xóa sự kiện từ " + DateTimeDelete + " trở về trước");
+                    GlobalFunction.InsertEventToSQL("Vận hành", "Tài khoản " + GlobalData.UserName + ": đã xóa " + n.ToString() + " dữ liệu từ " + DateTimeDelete + " trở về trước");
                     MessageBox.Show("Đã xóa " + n.ToString() + " dữ liệu!", "Xóa dữ liệu", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
