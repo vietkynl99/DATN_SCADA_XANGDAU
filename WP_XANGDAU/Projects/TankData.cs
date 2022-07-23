@@ -71,7 +71,7 @@ namespace XANGDAU
                 else   //real var
                     return ((uint)GlobalData.plc.Read(_DB + "." + _addr)).ConvertToDouble();
 
-                GlobalData.CheckData = true;
+                //GlobalData.CheckData = true;
             }
             catch (Exception ex)
             {
@@ -118,31 +118,39 @@ namespace XANGDAU
             throat2.Running = ReadDataFromPLC(throat2.DB_recv, "DBX0.1");
             throat2.Vout = ReadDataFromPLC(throat2.DB_recv, "DBD4");
             throat2.Ctrlvalue = ReadDataFromPLC(throat2.DB_recv, "DBD8");
-            ReadTankData();
+            ReadDataFromSQL();
             ProcessData();
         }
-        private void ReadTankData()
+        private void ReadDataFromSQL()
         {
             SqlDataReader data = GlobalFunction.ReadDataFromSQL("*", "ThongSoTank", "WHERE Tank = N'" + TankName + "'");
-            TempHigh = Convert.ToDouble(data[2]);
-            TempVeryHigh = Convert.ToDouble(data[3]);
-            TempLow = 0;
-            TempVeryLow = 0;
-            LevelHigh = Convert.ToDouble(data[4]);
-            LevelVeryHigh = Convert.ToDouble(data[5]);
-            LevelLow = Convert.ToDouble(data[6]);
-            LevelVeryLow = Convert.ToDouble(data[7]);
-            TankHeight = Convert.ToDouble(data[8]);
-            TankBaseArea = Convert.ToDouble(data[9]);
+            if (data != null)
+            {
+                TempHigh = Convert.ToDouble(data[2]);
+                TempVeryHigh = Convert.ToDouble(data[3]);
+                TempLow = 0;
+                TempVeryLow = 0;
+                LevelHigh = Convert.ToDouble(data[4]);
+                LevelVeryHigh = Convert.ToDouble(data[5]);
+                LevelLow = Convert.ToDouble(data[6]);
+                LevelVeryLow = Convert.ToDouble(data[7]);
+                TankHeight = Convert.ToDouble(data[8]);
+                TankBaseArea = Convert.ToDouble(data[9]);
+            }
+            else
+            {
+                //create exception
+                throw new Exception("Lỗi đọc dữ liệu từ SQL: Table: ThongSoTank, Tank: " + TankName);
+            }
         }
         private void ProcessData()
         {
             double[] levelScale = { LevelVeryLow, LevelLow, LevelHigh, LevelVeryHigh };
             double[] tempScale = { TempVeryLow, TempLow, TempHigh, TempVeryHigh };
             string[] StrScale = { "rất thấp", "thấp", "bình thường", "cao", "rất cao" };
-            for(int i=0; i<4; i++)
+            for (int i = 0; i < 4; i++)
             {
-                if(Level < levelScale[i])
+                if (Level < levelScale[i])
                 {
                     LevelStt = i;
                     LevelSttMessage = StrScale[i];
@@ -161,6 +169,29 @@ namespace XANGDAU
                 }
                 TempStt = 4;
                 TempSttMessage = StrScale[4];
+            }
+            //luu lai canh bao hoac loi trong SQL
+            switch (LevelStt)
+            {
+                case 1:
+                case 3:
+                    GlobalFunction.InsertEventToSQL("Cảnh báo", "Mức bể " + TankName + " đang ở mức " + LevelSttMessage + " (" + Level.ToString() + "m)");
+                    break;
+                case 0:
+                case 4:
+                    GlobalFunction.InsertEventToSQL("Lỗi", "Mức bể " + TankName + " đang ở mức " + LevelSttMessage + " (" + Level.ToString() + "m)");
+                    break;
+            }
+            switch (TempStt)
+            {
+                case 1:
+                case 3:
+                    GlobalFunction.InsertEventToSQL("Cảnh báo", "Nhiệt độ bể " + TankName + " đang ở mức " + TempSttMessage + " (" + Temp.ToString() + "°C)");
+                    break;
+                case 0:
+                case 4:
+                    GlobalFunction.InsertEventToSQL("Lỗi", "Nhiệt độ bể " + TankName + " đang ở mức " + TempSttMessage + " (" + Temp.ToString() + "°C)");
+                    break;
             }
         }
 
@@ -228,7 +259,7 @@ namespace XANGDAU
             //        TempSttMessage = "RON92 " + GlobalData.RON92.TempSttMessage + ", E100 " + GlobalData.E100.TempSttMessage;
             //    }
         }
-    
-    
+
+
     }
 }

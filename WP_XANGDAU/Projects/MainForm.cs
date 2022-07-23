@@ -270,20 +270,20 @@ namespace XANGDAU
                             GlobalData.E5.ReadData();
                             break;
 
-                    }    
+                    }
 
                     GlobalData.CheckData = true;
                 }
-                catch
+                catch(Exception ex)
                 {
                     //hiển thị thông báo trong lần đầu bị lỗi
                     if (GlobalData.CheckData)
                     {
-                        GlobalFunction.InsertEventToSQL("Lỗi", "Lỗi đọc dữ liệu do mất kết nối PLC! Hệ thống tạm dừng");
+                        GlobalFunction.InsertEventToSQL("Lỗi", ex.Message);
                         GlobalData.CheckData = false;
-                        GlobalData.plc.Close();
-                        GlobalData.plcConnectd = false;
-                        MessageBox.Show("Lỗi đọc dữ liệu từ PLC!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        //GlobalData.plc.Close();
+                        //GlobalData.plcConnectd = false;
+                        MessageBox.Show(ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     GlobalData.CheckData = false;
                 }               

@@ -72,9 +72,9 @@ namespace XANGDAU
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(177, 718);
+            this.panel1.Size = new System.Drawing.Size(236, 884);
             this.panel1.TabIndex = 4;
             // 
             // MenuCaidat
@@ -88,11 +88,11 @@ namespace XANGDAU
             this.MenuCaidat.ForeColor = System.Drawing.Color.Gainsboro;
             this.MenuCaidat.Image = global::XANGDAU.Properties.Resources.Setting_w35;
             this.MenuCaidat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.MenuCaidat.Location = new System.Drawing.Point(0, 416);
-            this.MenuCaidat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MenuCaidat.Location = new System.Drawing.Point(0, 513);
+            this.MenuCaidat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MenuCaidat.Name = "MenuCaidat";
-            this.MenuCaidat.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.MenuCaidat.Size = new System.Drawing.Size(177, 81);
+            this.MenuCaidat.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.MenuCaidat.Size = new System.Drawing.Size(236, 100);
             this.MenuCaidat.TabIndex = 9;
             this.MenuCaidat.Text = "             Cài đặt";
             this.MenuCaidat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -110,11 +110,11 @@ namespace XANGDAU
             this.MenuSukien.ForeColor = System.Drawing.Color.Gainsboro;
             this.MenuSukien.Image = global::XANGDAU.Properties.Resources.Event_w35;
             this.MenuSukien.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.MenuSukien.Location = new System.Drawing.Point(0, 335);
-            this.MenuSukien.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MenuSukien.Location = new System.Drawing.Point(0, 413);
+            this.MenuSukien.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MenuSukien.Name = "MenuSukien";
-            this.MenuSukien.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.MenuSukien.Size = new System.Drawing.Size(177, 81);
+            this.MenuSukien.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.MenuSukien.Size = new System.Drawing.Size(236, 100);
             this.MenuSukien.TabIndex = 8;
             this.MenuSukien.Text = "             Sự kiện";
             this.MenuSukien.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -132,11 +132,11 @@ namespace XANGDAU
             this.MenuLichsu.ForeColor = System.Drawing.Color.Gainsboro;
             this.MenuLichsu.Image = global::XANGDAU.Properties.Resources.history_w35;
             this.MenuLichsu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.MenuLichsu.Location = new System.Drawing.Point(0, 254);
-            this.MenuLichsu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MenuLichsu.Location = new System.Drawing.Point(0, 313);
+            this.MenuLichsu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MenuLichsu.Name = "MenuLichsu";
-            this.MenuLichsu.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.MenuLichsu.Size = new System.Drawing.Size(177, 81);
+            this.MenuLichsu.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.MenuLichsu.Size = new System.Drawing.Size(236, 100);
             this.MenuLichsu.TabIndex = 7;
             this.MenuLichsu.Text = "             Lịch sử";
             this.MenuLichsu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -154,11 +154,11 @@ namespace XANGDAU
             this.MenuTrangchu.ForeColor = System.Drawing.Color.Gainsboro;
             this.MenuTrangchu.Image = global::XANGDAU.Properties.Resources.Home_w35;
             this.MenuTrangchu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.MenuTrangchu.Location = new System.Drawing.Point(0, 173);
-            this.MenuTrangchu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MenuTrangchu.Location = new System.Drawing.Point(0, 213);
+            this.MenuTrangchu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MenuTrangchu.Name = "MenuTrangchu";
-            this.MenuTrangchu.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.MenuTrangchu.Size = new System.Drawing.Size(177, 81);
+            this.MenuTrangchu.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.MenuTrangchu.Size = new System.Drawing.Size(236, 100);
             this.MenuTrangchu.TabIndex = 0;
             this.MenuTrangchu.Text = "             Trang chủ";
             this.MenuTrangchu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -172,19 +172,18 @@ namespace XANGDAU
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(177, 173);
+            this.panel2.Size = new System.Drawing.Size(236, 213);
             this.panel2.TabIndex = 5;
             // 
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.label1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label1.Location = new System.Drawing.Point(21, 96);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(28, 118);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(136, 75);
+            this.label1.Size = new System.Drawing.Size(181, 92);
             this.label1.TabIndex = 0;
             this.label1.Text = "PHẦN MỀM NHẬP XUẤT XĂNG DẦU";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -194,10 +193,10 @@ namespace XANGDAU
             this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(95)))), ((int)(((byte)(134)))));
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Image = global::XANGDAU.Properties.Resources.Logo_png;
-            this.pictureBox2.Location = new System.Drawing.Point(48, 23);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Location = new System.Drawing.Point(64, 28);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(76, 72);
+            this.pictureBox2.Size = new System.Drawing.Size(101, 89);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 8;
             this.pictureBox2.TabStop = false;
@@ -213,10 +212,10 @@ namespace XANGDAU
             this.panelUserInfo.Controls.Add(this.lbFullName);
             this.panelUserInfo.Controls.Add(this.picUser);
             this.panelUserInfo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelUserInfo.Location = new System.Drawing.Point(177, 0);
-            this.panelUserInfo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelUserInfo.Location = new System.Drawing.Point(236, 0);
+            this.panelUserInfo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelUserInfo.Name = "panelUserInfo";
-            this.panelUserInfo.Size = new System.Drawing.Size(990, 61);
+            this.panelUserInfo.Size = new System.Drawing.Size(1320, 75);
             this.panelUserInfo.TabIndex = 0;
             this.panelUserInfo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelUserInfo_MouseDown);
             // 
@@ -226,10 +225,10 @@ namespace XANGDAU
             this.picCrown.BackColor = System.Drawing.Color.Transparent;
             this.picCrown.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picCrown.Image = global::XANGDAU.Properties.Resources.Crown_30;
-            this.picCrown.Location = new System.Drawing.Point(763, 7);
-            this.picCrown.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picCrown.Location = new System.Drawing.Point(1017, 9);
+            this.picCrown.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picCrown.Name = "picCrown";
-            this.picCrown.Size = new System.Drawing.Size(20, 20);
+            this.picCrown.Size = new System.Drawing.Size(27, 25);
             this.picCrown.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picCrown.TabIndex = 75;
             this.picCrown.TabStop = false;
@@ -240,10 +239,9 @@ namespace XANGDAU
             this.lbUserLevel.BackColor = System.Drawing.Color.Transparent;
             this.lbUserLevel.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbUserLevel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(206)))), ((int)(((byte)(133)))));
-            this.lbUserLevel.Location = new System.Drawing.Point(731, 10);
-            this.lbUserLevel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbUserLevel.Location = new System.Drawing.Point(975, 12);
             this.lbUserLevel.Name = "lbUserLevel";
-            this.lbUserLevel.Size = new System.Drawing.Size(91, 20);
+            this.lbUserLevel.Size = new System.Drawing.Size(121, 25);
             this.lbUserLevel.TabIndex = 75;
             this.lbUserLevel.Text = "ADMIN";
             this.lbUserLevel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -253,10 +251,10 @@ namespace XANGDAU
             this.buttonMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonMinimize.Image = global::XANGDAU.Properties.Resources.minimize_w40;
-            this.buttonMinimize.Location = new System.Drawing.Point(884, 18);
-            this.buttonMinimize.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonMinimize.Location = new System.Drawing.Point(1179, 22);
+            this.buttonMinimize.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonMinimize.Name = "buttonMinimize";
-            this.buttonMinimize.Size = new System.Drawing.Size(22, 24);
+            this.buttonMinimize.Size = new System.Drawing.Size(29, 30);
             this.buttonMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.buttonMinimize.TabIndex = 24;
             this.buttonMinimize.TabStop = false;
@@ -267,10 +265,10 @@ namespace XANGDAU
             this.buttonMaximize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonMaximize.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonMaximize.Image = ((System.Drawing.Image)(resources.GetObject("buttonMaximize.Image")));
-            this.buttonMaximize.Location = new System.Drawing.Point(918, 20);
-            this.buttonMaximize.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonMaximize.Location = new System.Drawing.Point(1224, 25);
+            this.buttonMaximize.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonMaximize.Name = "buttonMaximize";
-            this.buttonMaximize.Size = new System.Drawing.Size(16, 18);
+            this.buttonMaximize.Size = new System.Drawing.Size(21, 22);
             this.buttonMaximize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.buttonMaximize.TabIndex = 23;
             this.buttonMaximize.TabStop = false;
@@ -281,10 +279,10 @@ namespace XANGDAU
             this.buttonClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonClose.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonClose.Image = global::XANGDAU.Properties.Resources.close_w30;
-            this.buttonClose.Location = new System.Drawing.Point(948, 20);
-            this.buttonClose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonClose.Location = new System.Drawing.Point(1264, 25);
+            this.buttonClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonClose.Name = "buttonClose";
-            this.buttonClose.Size = new System.Drawing.Size(20, 22);
+            this.buttonClose.Size = new System.Drawing.Size(27, 27);
             this.buttonClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.buttonClose.TabIndex = 22;
             this.buttonClose.TabStop = false;
@@ -295,10 +293,9 @@ namespace XANGDAU
             this.lbFullName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbFullName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbFullName.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lbFullName.Location = new System.Drawing.Point(599, 28);
-            this.lbFullName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbFullName.Location = new System.Drawing.Point(799, 34);
             this.lbFullName.Name = "lbFullName";
-            this.lbFullName.Size = new System.Drawing.Size(226, 20);
+            this.lbFullName.Size = new System.Drawing.Size(301, 25);
             this.lbFullName.TabIndex = 1;
             this.lbFullName.Text = "Đỗ Hoàng Việt";
             this.lbFullName.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -309,10 +306,10 @@ namespace XANGDAU
             this.picUser.BackColor = System.Drawing.Color.Transparent;
             this.picUser.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picUser.Image = global::XANGDAU.Properties.Resources.AvatarUser;
-            this.picUser.Location = new System.Drawing.Point(833, 12);
-            this.picUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picUser.Location = new System.Drawing.Point(1111, 15);
+            this.picUser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picUser.Name = "picUser";
-            this.picUser.Size = new System.Drawing.Size(34, 37);
+            this.picUser.Size = new System.Drawing.Size(45, 46);
             this.picUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picUser.TabIndex = 7;
             this.picUser.TabStop = false;
@@ -322,29 +319,29 @@ namespace XANGDAU
             // 
             this.panelContent.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panelContent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContent.Location = new System.Drawing.Point(177, 61);
-            this.panelContent.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelContent.Location = new System.Drawing.Point(236, 75);
+            this.panelContent.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelContent.Name = "panelContent";
-            this.panelContent.Size = new System.Drawing.Size(990, 657);
+            this.panelContent.Size = new System.Drawing.Size(1320, 809);
             this.panelContent.TabIndex = 5;
             // 
             // DataTimer
             // 
-            this.DataTimer.Interval = 200;
+            this.DataTimer.Interval = 1000;
             this.DataTimer.Tick += new System.EventHandler(this.DataTimer_Tick);
             // 
             // MainForm
             // 
             this.AllowDrop = true;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1167, 718);
+            this.ClientSize = new System.Drawing.Size(1556, 884);
             this.Controls.Add(this.panelContent);
             this.Controls.Add(this.panelUserInfo);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hệ thống quan trắc thời tiết MET";

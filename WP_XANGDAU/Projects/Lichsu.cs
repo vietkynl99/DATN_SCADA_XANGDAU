@@ -28,7 +28,6 @@ namespace XANGDAU
 
             //chỉnh các lựa chọn về mặc định
             cbSelectData.SelectedIndex = 4;
-            cbOrderType.SelectedIndex = 2;
             cbSapxepthoigian.SelectedIndex = 0;
             cbSelectDateTime.SelectedIndex = 1;
             dateTimePickerStart.Value = DateTime.Today;
@@ -46,15 +45,16 @@ namespace XANGDAU
             //xóa toàn bộ bảng
             listView1.Clear();
             //thêm các cột
-            listView1.Columns.Add("STT", 50);
-            listView1.Columns.Add("Ngày", 100);
+            listView1.Columns.Add("STT", 40);
+            listView1.Columns.Add("Ngày", 85);
             listView1.Columns.Add("Thời gian", 100);
-            listView1.Columns.Add("Loại đơn", 80);
             listView1.Columns.Add("Mã đơn", 80);
             listView1.Columns.Add("Sản phẩm", 80);
-            listView1.Columns.Add("Thể tích (l)", 100);
-            listView1.Columns.Add("Đơn giá (VND/l)", 130);
-            listView1.Columns.Add("Thành tiền (x1000VND)", 180);
+            listView1.Columns.Add("Họng xuất", 80);
+            listView1.Columns.Add("Thể tích(l)", 80);
+            listView1.Columns.Add("Đơn giá(VND/l)", 110);
+            listView1.Columns.Add("Thành tiền(VND)", 120);
+            listView1.Columns.Add("Trạng thái", 130);
         }
 
         //upload bảng theo dữ liệu & thời gian lựa chọn
@@ -90,16 +90,21 @@ namespace XANGDAU
                         //cột 1 STT
                         listView1.Items.Add((i + 1).ToString());
 
-                        //lấy ra thời gian từ SQL data[7]
-                        DateTime thoigian = (DateTime)data[7];
+                        //lấy ra thời gian từ SQL data[8]
+                        DateTime thoigian = (DateTime)data[8];
                         //cột 2 ngày tháng
                         listView1.Items[i].SubItems.Add(thoigian.ToString("dd/MM/yyyy"));
                         //cột 3 thời gian
                         listView1.Items[i].SubItems.Add(thoigian.ToString("hh:mm:ss tt"));
 
-                        //các dữ liệu còn lại data[1]->data[6]
-                        for (int k = 1; k <= 6; k++)
-                            listView1.Items[i].SubItems.Add(data[k].ToString());
+                        //các dữ liệu còn lại data[1]->data[7]
+                        for (int k = 1; k <= 7; k++)
+                        {
+                            if (k == 6)
+                                listView1.Items[i].SubItems.Add(data[k].ToString() + "000");
+                            else
+                                listView1.Items[i].SubItems.Add(data[k].ToString());
+                        }
 
                         i++;
                     }
@@ -165,26 +170,24 @@ namespace XANGDAU
             GetSeclectDateTime();
             //check condition
             string condition = "";
-            if (cbSelectData.Text != "Toàn bộ" && cbOrderType.Text == "Toàn bộ")
+            if (cbSelectData.Text == "Toàn bộ")
+                condition = "";
+            else
                 condition = "SanPham = N'" + cbSelectData.Text + "'";
-            else if (cbSelectData.Text == "Toàn bộ" && cbOrderType.Text != "Toàn bộ")
-                condition = "LoaiDon = N'" + cbOrderType.Text + "'";
-            else if (cbSelectData.Text != "Toàn bộ" && cbOrderType.Text != "Toàn bộ")
-                condition = "SanPham = N'" + cbSelectData.Text + "' AND LoaiDon = N'" + cbOrderType.Text + "'";
 
             int n = UploadDataToListView("DonHang", condition, startDateTime, endDateTime);
             lbSoluongketqua.Text = n.ToString() + " dữ liệu được tìm thấy";
             if (n == 0)
-                MessageBox.Show("Không có dữ liệu được tìm thấy!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);   
+                MessageBox.Show("Không có dữ liệu được tìm thấy!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         //tự động làm mới dữ liệu sau 5 lần thời gian đơn vị
         private void AutoRefreshTimer_Tick(object sender, EventArgs e)
         {
-            if(GlobalData.SystemRunning && cbAutoRefresh.Checked)
+            if (GlobalData.SystemRunning && cbAutoRefresh.Checked)
                 UploadToListView();
         }
-     
+
         private void cbSapxepthoigian_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cbSapxepthoigian.SelectedIndex == 0)
@@ -192,7 +195,7 @@ namespace XANGDAU
             else
                 timeSort = "DESC";  //sáp xếp giảm dần
         }
-   
+
         private void cbSelectDateTime_SelectedIndexChanged(object sender, EventArgs e)
         {
             //hiện tùy chọn thời gian
@@ -266,10 +269,10 @@ namespace XANGDAU
         private void btExportToExcel_Click(object sender, EventArgs e)
         {
             //kiểm tra đã có dữ liệu chưa
-            if(listView1.Items.Count==0)
+            if (listView1.Items.Count == 0)
             {
                 MessageBox.Show("Chưa có dữ liệu trong bảng!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }   
+            }
             else
             {
                 try

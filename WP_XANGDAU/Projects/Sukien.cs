@@ -33,7 +33,7 @@ namespace XANGDAU
             btDeleteData.Enabled = GlobalData.UserLevel == "ADMIN";
 
             //chỉnh các lựa chọn về mặc định
-            cbSelectData.SelectedIndex = 4;
+            cbSelectData.SelectedIndex = 3;
             cbSapxepthoigian.SelectedIndex = 0;
             cbSelectDateTime.SelectedIndex = 1;
             cbDeleteData.SelectedIndex = 0;

@@ -13,9 +13,9 @@ namespace XANGDAU
 {
     public partial class TrangchuForm : Form
     {
-        string PLCAddSetpoint = "DB3.DBD76";
-        string PLCAddStart = "DB3.DBX80.0";
-        string PLCAddEstop = "DB3.DBX80.1";
+        string PLCAddSetpoint = "";
+        string PLCAddStart = "";
+        string PLCAddEstop = "";
 
         public TrangchuForm()
         {
@@ -32,6 +32,10 @@ namespace XANGDAU
             cbTankSelect.SelectedIndex = 0;
             GlobalData.TankIndex = cbTankSelect.SelectedIndex;
             EditDataName();
+
+            //printPreviewDialog1.Document = printDocument1;
+            //printPreviewDialog1.ShowDialog();
+            //Application.Exit();
         }
 
         private void showSystemStatus(int warninglevel, string status)     //warninglevel: 0:kocoloi     1:canhbao   2:loi
@@ -90,8 +94,8 @@ namespace XANGDAU
             else
             {
                 GlobalData.SystemRunning = false;
-              //  lbSystemStatus.Text = "Hệ thống đang tắt! Dữ liệu mới không thể cập nhật!";
-              //  picSystemStatus.Image = Properties.Resources.warning;
+                //  lbSystemStatus.Text = "Hệ thống đang tắt! Dữ liệu mới không thể cập nhật!";
+                //  picSystemStatus.Image = Properties.Resources.warning;
             }
         }
 
@@ -172,10 +176,10 @@ namespace XANGDAU
                     lbLevel2.Text = String.Format("{0:0.0}m", obj.Level);
                     lbTemp2.Text = String.Format("{0:0.0}°C", obj.Temp);
                     lbValveOut2.Text = String.Format("{0:0}%", throat.Ctrlvalue);
-                    lbFlowOut2.Text = String.Format("{0:0}m3/h", throat.Flow);
+                    lbFlowOut2.Text = String.Format("{0:0.0}m3/h", throat.Flow);
                     UpdateLevel((int)(obj.Level * 100 / obj.TankHeight));
 
-                    lbVout.Text = String.Format("{0:0.0}", throat.Vout);
+                    lbVout.Text = String.Format("{0:0}", throat.Vout*1000);
 
                     txt1.Text = obj.TempSttMessage;
                     txt2.Text = obj.LevelSttMessage;
@@ -250,13 +254,13 @@ namespace XANGDAU
                     UpdateLevelE100(0);
                 }
 
-                lbVout.Text = "----";
-                txt3.Text = "----";
-                txt4.Text = "----";
-                txt5.Text = "----";
-                txt6.Text = "----";
-                txt2.Text = "----";
-                txt1.Text = "----";
+                //lbVout.Text = "----";
+                //txt3.Text = "----";
+                //txt4.Text = "----";
+                //txt5.Text = "----";
+                //txt6.Text = "----";
+                //txt2.Text = "----";
+                //txt1.Text = "----";
 
                 txt2.BackColor = Color.WhiteSmoke;
                 lbLevel2.BackColor = Color.WhiteSmoke;
@@ -293,10 +297,10 @@ namespace XANGDAU
             UpdateData();
         }
 
-        
+
         private void getPLCAddress(TankData obj)
         {
-            if(GlobalData.TankIndex % 2 == 0 )  //throat1
+            if (GlobalData.TankIndex % 2 == 0)  //throat1
             {
                 PLCAddSetpoint = obj.throat1.DB_send + ".DBD4";
                 PLCAddStart = obj.throat1.DB_send + ".DBX0.0";
@@ -313,12 +317,12 @@ namespace XANGDAU
         private void btStart_MouseDown(object sender, MouseEventArgs e)
         {
             TankData[] obj_arr = { GlobalData.Diezel, GlobalData.RON92, GlobalData.RON95, GlobalData.E5 };
-            getPLCAddress(obj_arr[GlobalData.TankIndex/2]);
+            getPLCAddress(obj_arr[GlobalData.TankIndex / 2]);
             //đọc giá trị setpoint
-            double setpoint=0;
+            double setpoint = 0;
             try
             {
-                setpoint = Convert.ToDouble(lbSetpoint.Text) / 10;
+                setpoint = Convert.ToDouble(lbSetpoint.Text)/1000;
             }
             catch
             {
@@ -335,7 +339,7 @@ namespace XANGDAU
             try
             {
                 GlobalData.plc.Write(PLCAddSetpoint, setpoint);
-                GlobalData.plc.Write(PLCAddStart,1);
+                GlobalData.plc.Write(PLCAddStart, 1);
             }
             catch
             {
@@ -443,7 +447,7 @@ namespace XANGDAU
                         lbThoigian.Text = data[8].ToString();
                         int throat = Convert.ToInt32(data[3].ToString().Split(' ')[1]);
                         SelectThroatTank(throat - 1);
-                    }   
+                    }
                     else
                     {
                         MessageBox.Show("Mã đơn không tồn tại!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -453,7 +457,7 @@ namespace XANGDAU
                         lbThanhtien.Text = "0";
                         lbTrangthai.Text = "----";
                         lbThoigian.Text = "----";
-                    }    
+                    }
                 }
                 catch (Exception ex)
                 {
@@ -461,6 +465,82 @@ namespace XANGDAU
                     tbIDdonhang.Text = "";
                 }
             }
+        }
+
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            try
+            {
+                Image image = Properties.Resources.Logo_png;
+
+                e.Graphics.DrawImage(image, 700, 40, 90, 90);
+                int yPos = 40;
+                e.Graphics.DrawString("CÔNG TY XĂNG DẦU B12 HẢI DƯƠNG", new Font("Arial", 18, FontStyle.Bold), Brushes.DarkBlue, new Point(30, yPos));
+                e.Graphics.DrawString("Địa chỉ: Nguyễn Lương Bằng, Thành phố Hải Dương", new Font("Arial", 12, FontStyle.Regular), Brushes.DarkBlue, new Point(30, yPos += 30));
+                e.Graphics.DrawString("Website: xangdaub12haiduong.com", new Font("Arial", 12, FontStyle.Regular), Brushes.DarkBlue, new Point(30, yPos += 20));
+                e.Graphics.DrawString("Hotline: 0123456789", new Font("Arial", 12, FontStyle.Regular), Brushes.DarkBlue, new Point(30, yPos += 20));
+
+                e.Graphics.DrawString("HÓA ĐƠN", new Font("Arial", 36, FontStyle.Bold), Brushes.Black, new Point(310, yPos += 70));
+
+                e.Graphics.DrawString("Họ và tên khách hàng: .........................................................................................................................", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(30, yPos += 90));
+                e.Graphics.DrawString("Địa chỉ: .................................................................................................................................................", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(30, yPos += 25));
+                e.Graphics.DrawString("Số điện thoại: .......................................................................................................................................", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(30, yPos += 25));
+
+                e.Graphics.DrawString("------------------------------------------------------------------------------------------------------------------------------------", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(30, yPos += 50));
+                int xPos = 30;
+                e.Graphics.DrawString("STT", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(xPos, yPos += 20));
+                e.Graphics.DrawString("Mã đơn", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(xPos += 50, yPos));
+                e.Graphics.DrawString("Sản phẩm", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(xPos += 90, yPos));
+                e.Graphics.DrawString("Họng xuất", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(xPos += 100, yPos));
+                e.Graphics.DrawString("Thể tích(lit)", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(xPos += 100, yPos));
+                e.Graphics.DrawString("Đơn giá(VND/lit)", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(xPos += 120, yPos));
+                e.Graphics.DrawString("Thành tiền(VND)", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(xPos += 140, yPos));
+                e.Graphics.DrawString("------------------------------------------------------------------------------------------------------------------------------------", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(30, yPos += 20));
+                xPos = 30;
+                e.Graphics.DrawString("1", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(xPos, yPos += 20));
+                e.Graphics.DrawString(tbIDdonhang.Text, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(xPos += 50, yPos));
+                e.Graphics.DrawString(lbTankName.Text, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(xPos += 90, yPos));
+                e.Graphics.DrawString("Họng " + (cbTankSelect.SelectedIndex + 1).ToString(), new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(xPos += 100, yPos));
+                e.Graphics.DrawString(lbSetpoint.Text, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(xPos += 100, yPos));
+                e.Graphics.DrawString(lbDongia.Text, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(xPos += 120, yPos));
+                e.Graphics.DrawString(lbThanhtien.Text + "000", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(xPos += 140, yPos));
+
+                e.Graphics.DrawString("------------------------------------------------------------------------------------------------------------------------------------", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(30, yPos += 30));
+
+                e.Graphics.DrawString("Thành tiền:    " + lbThanhtien.Text + "000 VND", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(550, yPos += 50));
+                e.Graphics.DrawString("Chiết khấu:    0 VND", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(550, yPos += 20));
+                e.Graphics.DrawString("Tổng:             " + lbThanhtien.Text + "000 VND", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(550, yPos += 20));
+
+
+                e.Graphics.DrawString("Ngày " + DateTime.Now.Day.ToString() + ", Tháng " + DateTime.Now.Month.ToString() + ", Năm " + DateTime.Now.Year.ToString(), new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(530, yPos += 50));
+                xPos = 60;
+                e.Graphics.DrawString("Người mua hàng", new Font("Arial", 12, FontStyle.Bold), Brushes.Black, new Point(xPos, yPos += 20));
+                e.Graphics.DrawString("Người bán hàng", new Font("Arial", 12, FontStyle.Bold), Brushes.Black, new Point(xPos + 520, yPos));
+                e.Graphics.DrawString("(Ký, ghi rõ họ tên)", new Font("Arial", 9, FontStyle.Italic), Brushes.Black, new Point(xPos + 20, yPos += 20));
+                e.Graphics.DrawString("(Ký, ghi rõ họ tên)", new Font("Arial", 9, FontStyle.Italic), Brushes.Black, new Point(xPos + 540, yPos));
+
+                MessageBox.Show("Xuất hóa đơn thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch
+            {
+                MessageBox.Show("Lỗi trong quá trình xuất hóa đơn. Hãy thử lại!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (lbSetpoint.Text == "0")
+            {
+                MessageBox.Show("Bạn chưa nhập mã đơn!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (lbTrangthai.Text != "Đã hoàn thành")
+            {
+                MessageBox.Show("Đơn hàng chưa hoàn thành, không thể xuất hóa đơn!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            printDocument1.Print();
         }
     }
 }

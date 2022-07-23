@@ -77,9 +77,9 @@ namespace XANGDAU
             this.gradientPanel1.Controls.Add(this.groupBox2);
             this.gradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gradientPanel1.Location = new System.Drawing.Point(0, 0);
-            this.gradientPanel1.Margin = new System.Windows.Forms.Padding(2);
+            this.gradientPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gradientPanel1.Name = "gradientPanel1";
-            this.gradientPanel1.Size = new System.Drawing.Size(1100, 718);
+            this.gradientPanel1.Size = new System.Drawing.Size(1467, 884);
             this.gradientPanel1.TabIndex = 53;
             this.gradientPanel1.TopColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(27)))), ((int)(((byte)(37)))));
             // 
@@ -92,11 +92,11 @@ namespace XANGDAU
             this.groupBox1.Controls.Add(this.listView1);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.groupBox1.Location = new System.Drawing.Point(33, 186);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(22, 2, 2, 2);
+            this.groupBox1.Location = new System.Drawing.Point(44, 229);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(29, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox1.Size = new System.Drawing.Size(1007, 499);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.groupBox1.Size = new System.Drawing.Size(1343, 614);
             this.groupBox1.TabIndex = 54;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dữ liệu";
@@ -116,10 +116,10 @@ namespace XANGDAU
             this.listView1.GridLines = true;
             this.listView1.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(4, 21);
-            this.listView1.Margin = new System.Windows.Forms.Padding(2);
+            this.listView1.Location = new System.Drawing.Point(5, 26);
+            this.listView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(999, 473);
+            this.listView1.Size = new System.Drawing.Size(1333, 582);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -164,11 +164,11 @@ namespace XANGDAU
             this.groupBox2.Controls.Add(this.lbSoluongketqua);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.groupBox2.Location = new System.Drawing.Point(33, 11);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox2.Location = new System.Drawing.Point(44, 14);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Size = new System.Drawing.Size(1007, 158);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox2.Size = new System.Drawing.Size(1343, 194);
             this.groupBox2.TabIndex = 55;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Tìm kiếm";
@@ -188,10 +188,10 @@ namespace XANGDAU
             "1 năm trước",
             "2 năm trước",
             "Toàn bộ"});
-            this.cbDeleteData.Location = new System.Drawing.Point(362, 67);
-            this.cbDeleteData.Margin = new System.Windows.Forms.Padding(2);
+            this.cbDeleteData.Location = new System.Drawing.Point(483, 82);
+            this.cbDeleteData.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbDeleteData.Name = "cbDeleteData";
-            this.cbDeleteData.Size = new System.Drawing.Size(140, 24);
+            this.cbDeleteData.Size = new System.Drawing.Size(185, 28);
             this.cbDeleteData.TabIndex = 20;
             this.cbDeleteData.SelectedIndexChanged += new System.EventHandler(this.cbDeleteData_SelectedIndexChanged);
             // 
@@ -201,10 +201,9 @@ namespace XANGDAU
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label1.Location = new System.Drawing.Point(11, 31);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(15, 38);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 17);
+            this.label1.Size = new System.Drawing.Size(83, 20);
             this.label1.TabIndex = 1;
             this.label1.Text = "Phân loại:";
             // 
@@ -214,10 +213,9 @@ namespace XANGDAU
             this.lbDeleteData.BackColor = System.Drawing.Color.Transparent;
             this.lbDeleteData.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbDeleteData.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lbDeleteData.Location = new System.Drawing.Point(276, 70);
-            this.lbDeleteData.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbDeleteData.Location = new System.Drawing.Point(368, 86);
             this.lbDeleteData.Name = "lbDeleteData";
-            this.lbDeleteData.Size = new System.Drawing.Size(86, 17);
+            this.lbDeleteData.Size = new System.Drawing.Size(101, 20);
             this.lbDeleteData.TabIndex = 19;
             this.lbDeleteData.Text = "Xóa sự kiện:";
             // 
@@ -231,12 +229,11 @@ namespace XANGDAU
             "Vận hành",
             "Cảnh báo",
             "Lỗi",
-            "Thiết bị",
             "Toàn bộ"});
-            this.cbSelectData.Location = new System.Drawing.Point(84, 28);
-            this.cbSelectData.Margin = new System.Windows.Forms.Padding(2);
+            this.cbSelectData.Location = new System.Drawing.Point(112, 34);
+            this.cbSelectData.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbSelectData.Name = "cbSelectData";
-            this.cbSelectData.Size = new System.Drawing.Size(140, 24);
+            this.cbSelectData.Size = new System.Drawing.Size(185, 28);
             this.cbSelectData.TabIndex = 2;
             // 
             // cbAutoRefresh
@@ -245,10 +242,10 @@ namespace XANGDAU
             this.cbAutoRefresh.BackColor = System.Drawing.Color.Transparent;
             this.cbAutoRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbAutoRefresh.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.cbAutoRefresh.Location = new System.Drawing.Point(108, 115);
-            this.cbAutoRefresh.Margin = new System.Windows.Forms.Padding(2);
+            this.cbAutoRefresh.Location = new System.Drawing.Point(144, 142);
+            this.cbAutoRefresh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbAutoRefresh.Name = "cbAutoRefresh";
-            this.cbAutoRefresh.Size = new System.Drawing.Size(132, 21);
+            this.cbAutoRefresh.Size = new System.Drawing.Size(155, 24);
             this.cbAutoRefresh.TabIndex = 18;
             this.cbAutoRefresh.Text = "Tự động làm mới";
             this.cbAutoRefresh.UseVisualStyleBackColor = false;
@@ -259,10 +256,9 @@ namespace XANGDAU
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label2.Location = new System.Drawing.Point(276, 31);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(368, 38);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(71, 17);
+            this.label2.Size = new System.Drawing.Size(82, 20);
             this.label2.TabIndex = 3;
             this.label2.Text = "Thời gian:";
             // 
@@ -275,10 +271,10 @@ namespace XANGDAU
             this.cbSapxepthoigian.Items.AddRange(new object[] {
             "Thời gian tăng dần",
             "Thời gian giảm dần"});
-            this.cbSapxepthoigian.Location = new System.Drawing.Point(84, 67);
-            this.cbSapxepthoigian.Margin = new System.Windows.Forms.Padding(2);
+            this.cbSapxepthoigian.Location = new System.Drawing.Point(112, 82);
+            this.cbSapxepthoigian.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbSapxepthoigian.Name = "cbSapxepthoigian";
-            this.cbSapxepthoigian.Size = new System.Drawing.Size(140, 24);
+            this.cbSapxepthoigian.Size = new System.Drawing.Size(185, 28);
             this.cbSapxepthoigian.TabIndex = 17;
             this.cbSapxepthoigian.SelectedIndexChanged += new System.EventHandler(this.cbSapxepthoigian_SelectedIndexChanged);
             // 
@@ -295,10 +291,10 @@ namespace XANGDAU
             "12 giờ vừa qua",
             "24 giờ vừa qua",
             "Tùy chọn"});
-            this.cbSelectDateTime.Location = new System.Drawing.Point(362, 28);
-            this.cbSelectDateTime.Margin = new System.Windows.Forms.Padding(2);
+            this.cbSelectDateTime.Location = new System.Drawing.Point(483, 34);
+            this.cbSelectDateTime.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbSelectDateTime.Name = "cbSelectDateTime";
-            this.cbSelectDateTime.Size = new System.Drawing.Size(140, 24);
+            this.cbSelectDateTime.Size = new System.Drawing.Size(185, 28);
             this.cbSelectDateTime.TabIndex = 4;
             this.cbSelectDateTime.SelectedIndexChanged += new System.EventHandler(this.cbSelectDateTime_SelectedIndexChanged);
             // 
@@ -308,10 +304,9 @@ namespace XANGDAU
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label5.Location = new System.Drawing.Point(11, 70);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(15, 86);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(63, 17);
+            this.label5.Size = new System.Drawing.Size(74, 20);
             this.label5.TabIndex = 16;
             this.label5.Text = "Sắp xếp:";
             // 
@@ -321,10 +316,10 @@ namespace XANGDAU
             this.btDeleteData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btDeleteData.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btDeleteData.ForeColor = System.Drawing.Color.Black;
-            this.btDeleteData.Location = new System.Drawing.Point(530, 66);
-            this.btDeleteData.Margin = new System.Windows.Forms.Padding(2);
+            this.btDeleteData.Location = new System.Drawing.Point(707, 81);
+            this.btDeleteData.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btDeleteData.Name = "btDeleteData";
-            this.btDeleteData.Size = new System.Drawing.Size(105, 27);
+            this.btDeleteData.Size = new System.Drawing.Size(140, 33);
             this.btDeleteData.TabIndex = 9;
             this.btDeleteData.Text = "Xóa";
             this.btDeleteData.UseVisualStyleBackColor = false;
@@ -338,10 +333,10 @@ namespace XANGDAU
             this.panelDateTimePicker.Controls.Add(this.dateTimePickerStart);
             this.panelDateTimePicker.Controls.Add(this.label3);
             this.panelDateTimePicker.Controls.Add(this.label4);
-            this.panelDateTimePicker.Location = new System.Drawing.Point(518, 24);
-            this.panelDateTimePicker.Margin = new System.Windows.Forms.Padding(2);
+            this.panelDateTimePicker.Location = new System.Drawing.Point(691, 30);
+            this.panelDateTimePicker.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelDateTimePicker.Name = "panelDateTimePicker";
-            this.panelDateTimePicker.Size = new System.Drawing.Size(464, 32);
+            this.panelDateTimePicker.Size = new System.Drawing.Size(619, 39);
             this.panelDateTimePicker.TabIndex = 15;
             this.panelDateTimePicker.Visible = false;
             // 
@@ -350,10 +345,10 @@ namespace XANGDAU
             this.dateTimePickerEnd.CustomFormat = "dd/MM/yyyy hh:mm:ss tt";
             this.dateTimePickerEnd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
             this.dateTimePickerEnd.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePickerEnd.Location = new System.Drawing.Point(263, 5);
-            this.dateTimePickerEnd.Margin = new System.Windows.Forms.Padding(2);
+            this.dateTimePickerEnd.Location = new System.Drawing.Point(351, 6);
+            this.dateTimePickerEnd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTimePickerEnd.Name = "dateTimePickerEnd";
-            this.dateTimePickerEnd.Size = new System.Drawing.Size(184, 22);
+            this.dateTimePickerEnd.Size = new System.Drawing.Size(244, 25);
             this.dateTimePickerEnd.TabIndex = 23;
             // 
             // dateTimePickerStart
@@ -361,10 +356,10 @@ namespace XANGDAU
             this.dateTimePickerStart.CustomFormat = "dd/MM/yyyy hh:mm:ss tt";
             this.dateTimePickerStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
             this.dateTimePickerStart.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePickerStart.Location = new System.Drawing.Point(38, 5);
-            this.dateTimePickerStart.Margin = new System.Windows.Forms.Padding(2);
+            this.dateTimePickerStart.Location = new System.Drawing.Point(51, 6);
+            this.dateTimePickerStart.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTimePickerStart.Name = "dateTimePickerStart";
-            this.dateTimePickerStart.Size = new System.Drawing.Size(184, 22);
+            this.dateTimePickerStart.Size = new System.Drawing.Size(244, 25);
             this.dateTimePickerStart.TabIndex = 9;
             // 
             // label3
@@ -373,10 +368,9 @@ namespace XANGDAU
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label3.Location = new System.Drawing.Point(9, 5);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(12, 6);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(29, 17);
+            this.label3.Size = new System.Drawing.Size(33, 20);
             this.label3.TabIndex = 6;
             this.label3.Text = "Từ:";
             // 
@@ -386,10 +380,9 @@ namespace XANGDAU
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label4.Location = new System.Drawing.Point(227, 5);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(303, 6);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(38, 17);
+            this.label4.Size = new System.Drawing.Size(44, 20);
             this.label4.TabIndex = 8;
             this.label4.Text = "Đến:";
             // 
@@ -398,10 +391,10 @@ namespace XANGDAU
             this.btSearch.BackColor = System.Drawing.Color.WhiteSmoke;
             this.btSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btSearch.ForeColor = System.Drawing.Color.Black;
-            this.btSearch.Location = new System.Drawing.Point(15, 110);
-            this.btSearch.Margin = new System.Windows.Forms.Padding(2);
+            this.btSearch.Location = new System.Drawing.Point(20, 135);
+            this.btSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btSearch.Name = "btSearch";
-            this.btSearch.Size = new System.Drawing.Size(80, 27);
+            this.btSearch.Size = new System.Drawing.Size(107, 33);
             this.btSearch.TabIndex = 11;
             this.btSearch.Text = "Tìm kiếm";
             this.btSearch.UseVisualStyleBackColor = false;
@@ -413,23 +406,22 @@ namespace XANGDAU
             this.lbSoluongketqua.BackColor = System.Drawing.Color.Transparent;
             this.lbSoluongketqua.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbSoluongketqua.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lbSoluongketqua.Location = new System.Drawing.Point(276, 116);
-            this.lbSoluongketqua.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbSoluongketqua.Location = new System.Drawing.Point(368, 143);
             this.lbSoluongketqua.Name = "lbSoluongketqua";
-            this.lbSoluongketqua.Size = new System.Drawing.Size(150, 17);
+            this.lbSoluongketqua.Size = new System.Drawing.Size(177, 20);
             this.lbSoluongketqua.TabIndex = 12;
             this.lbSoluongketqua.Text = "0 dữ liệu được tìm thấy";
             // 
             // SukienForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1100, 718);
+            this.ClientSize = new System.Drawing.Size(1467, 884);
             this.Controls.Add(this.gradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "SukienForm";

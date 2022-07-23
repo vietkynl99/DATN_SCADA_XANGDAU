@@ -54,8 +54,6 @@ namespace XANGDAU
             this.label4 = new System.Windows.Forms.Label();
             this.btSearch = new System.Windows.Forms.Button();
             this.lbSoluongketqua = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.cbOrderType = new System.Windows.Forms.ComboBox();
             this.gradientPanel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -150,8 +148,6 @@ namespace XANGDAU
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.cbOrderType);
             this.groupBox2.Controls.Add(this.btExportToExcel);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.cbSelectData);
@@ -180,7 +176,7 @@ namespace XANGDAU
             this.btExportToExcel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btExportToExcel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btExportToExcel.ForeColor = System.Drawing.Color.Black;
-            this.btExportToExcel.Location = new System.Drawing.Point(681, 90);
+            this.btExportToExcel.Location = new System.Drawing.Point(331, 82);
             this.btExportToExcel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btExportToExcel.Name = "btExportToExcel";
             this.btExportToExcel.Size = new System.Drawing.Size(140, 33);
@@ -379,34 +375,6 @@ namespace XANGDAU
             this.lbSoluongketqua.TabIndex = 12;
             this.lbSoluongketqua.Text = "0 dữ liêu được tìm thấy";
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label6.Location = new System.Drawing.Point(327, 90);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(83, 20);
-            this.label6.TabIndex = 22;
-            this.label6.Text = "Loại đơn: ";
-            // 
-            // cbOrderType
-            // 
-            this.cbOrderType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbOrderType.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
-            this.cbOrderType.ForeColor = System.Drawing.Color.Black;
-            this.cbOrderType.FormattingEnabled = true;
-            this.cbOrderType.Items.AddRange(new object[] {
-            "Nhập",
-            "Xuất",
-            "Toàn bộ"});
-            this.cbOrderType.Location = new System.Drawing.Point(437, 86);
-            this.cbOrderType.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cbOrderType.Name = "cbOrderType";
-            this.cbOrderType.Size = new System.Drawing.Size(185, 28);
-            this.cbOrderType.TabIndex = 23;
-            // 
             // LichsuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -455,7 +423,5 @@ namespace XANGDAU
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DateTimePicker dateTimePickerEnd;
         private System.Windows.Forms.Button btExportToExcel;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox cbOrderType;
     }
 }
