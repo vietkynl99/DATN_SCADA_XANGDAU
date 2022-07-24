@@ -1,0 +1,29 @@
+C:\Documents and Settings\Admin\Local Settings\Application Data\Temporary Projects\nhandulieuCOM\bin\Release\nhandulieuCOM.exe
+C:\Documents and Settings\Admin\Local Settings\Application Data\Temporary Projects\nhandulieuCOM\bin\Release\nhandulieuCOM.pdb
+C:\Documents and Settings\Admin\Local Settings\Application Data\Temporary Projects\nhandulieuCOM\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\Admin\Local Settings\Application Data\Temporary Projects\nhandulieuCOM\obj\x86\Release\nhandulieuCOM.Form1.resources
+C:\Documents and Settings\Admin\Local Settings\Application Data\Temporary Projects\nhandulieuCOM\obj\x86\Release\nhandulieuCOM.Properties.Resources.resources
+C:\Documents and Settings\Admin\Local Settings\Application Data\Temporary Projects\nhandulieuCOM\obj\x86\Release\GenerateResource.read.1.tlog
+C:\Documents and Settings\Admin\Local Settings\Application Data\Temporary Projects\nhandulieuCOM\obj\x86\Release\GenerateResource.write.1.tlog
+C:\Documents and Settings\Admin\Local Settings\Application Data\Temporary Projects\nhandulieuCOM\obj\x86\Release\nhandulieuCOM.exe
+C:\Documents and Settings\Admin\Local Settings\Application Data\Temporary Projects\nhandulieuCOM\obj\x86\Release\nhandulieuCOM.pdb
+C:\Users\anmay\Desktop\2578_123450-1467033134-0-nhandulieucom\nhandulieuCOM\nhandulieuCOM\obj\x86\Release\nhandulieuCOM.csprojAssemblyReference.cache
+C:\Users\anmay\Desktop\2578_123450-1467033134-0-nhandulieucom\nhandulieuCOM\nhandulieuCOM\obj\x86\Release\nhandulieuCOM.Form1.resources
+C:\Users\anmay\Desktop\2578_123450-1467033134-0-nhandulieucom\nhandulieuCOM\nhandulieuCOM\obj\x86\Release\nhandulieuCOM.Properties.Resources.resources
+C:\Users\anmay\Desktop\2578_123450-1467033134-0-nhandulieucom\nhandulieuCOM\nhandulieuCOM\obj\x86\Release\nhandulieuCOM.csproj.GenerateResource.cache
+C:\Users\anmay\Desktop\2578_123450-1467033134-0-nhandulieucom\nhandulieuCOM\nhandulieuCOM\obj\x86\Release\nhandulieuCOM.csproj.CoreCompileInputs.cache
+C:\Users\anmay\Desktop\2578_123450-1467033134-0-nhandulieucom\nhandulieuCOM\nhandulieuCOM\obj\x86\Release\nhandulieuCOM.exe
+C:\Users\anmay\Desktop\2578_123450-1467033134-0-nhandulieucom\nhandulieuCOM\nhandulieuCOM\obj\x86\Release\nhandulieuCOM.pdb
+C:\Users\anmay\Desktop\2578_123450-1467033134-0-nhandulieucom\nhandulieuCOM\nhandulieuCOM\bin\Release\nhandulieuCOM.exe
+C:\Users\anmay\Desktop\2578_123450-1467033134-0-nhandulieucom\nhandulieuCOM\nhandulieuCOM\bin\Release\nhandulieuCOM.pdb
+C:\Users\anmay\OneDrive\Documents\CSharp\nhandulieuCOM\nhandulieuCOM\bin\Release\nhandulieuCOM.exe
+C:\Users\anmay\OneDrive\Documents\CSharp\nhandulieuCOM\nhandulieuCOM\bin\Release\nhandulieuCOM.pdb
+C:\Users\anmay\OneDrive\Documents\CSharp\nhandulieuCOM\nhandulieuCOM\obj\x86\Release\nhandulieuCOM.csprojAssemblyReference.cache
+C:\Users\anmay\OneDrive\Documents\CSharp\nhandulieuCOM\nhandulieuCOM\obj\x86\Release\nhandulieuCOM.Form1.resources
+C:\Users\anmay\OneDrive\Documents\CSharp\nhandulieuCOM\nhandulieuCOM\obj\x86\Release\nhandulieuCOM.Properties.Resources.resources
+C:\Users\anmay\OneDrive\Documents\CSharp\nhandulieuCOM\nhandulieuCOM\obj\x86\Release\nhandulieuCOM.csproj.GenerateResource.cache
+C:\Users\anmay\OneDrive\Documents\CSharp\nhandulieuCOM\nhandulieuCOM\obj\x86\Release\nhandulieuCOM.csproj.CoreCompileInputs.cache
+C:\Users\anmay\OneDrive\Documents\CSharp\nhandulieuCOM\nhandulieuCOM\obj\x86\Release\nhandulieuCOM.exe
+C:\Users\anmay\OneDrive\Documents\CSharp\nhandulieuCOM\nhandulieuCOM\obj\x86\Release\nhandulieuCOM.pdb
+C:\Users\anmay\OneDrive\Documents\CSharp\nhandulieuCOM\nhandulieuCOM\bin\Release\LibLED.dll
+C:\Users\anmay\OneDrive\Documents\CSharp\nhandulieuCOM\nhandulieuCOM\obj\x86\Release\nhandulieuCOM.csproj.CopyComplete
