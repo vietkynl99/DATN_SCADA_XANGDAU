@@ -9,7 +9,7 @@ namespace Web_XANGDAU
 {
     public class GlobalFunction
     {
-        public string chuoiketnoi = System.Configuration.ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
+        string chuoiketnoi = System.Configuration.ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
         string sql;
         SqlConnection ketnoi;
         SqlCommand thuchien;

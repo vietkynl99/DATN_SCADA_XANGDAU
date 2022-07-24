@@ -11,7 +11,7 @@ namespace Web_XANGDAU
 {
     public class PLC_Command
     {
-        //string chuoiketnoi = System.Configuration.ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
+        string chuoiketnoi = System.Configuration.ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
         string sql;
         SqlConnection ketnoi;
         SqlCommand thuchien;

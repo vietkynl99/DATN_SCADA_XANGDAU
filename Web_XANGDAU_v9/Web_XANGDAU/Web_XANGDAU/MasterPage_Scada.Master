@@ -94,7 +94,6 @@
                 <asp:Label ID="lbl_Quyen" runat="server" Text="" class="name"></asp:Label>
                 <a href="#" class="photo">
                     <img src="../Images/DHV_chandung.jpg" />
-                    <%--<img src="../Images/Link.jpg" />--%>
                 </a>
                 
             </div>
