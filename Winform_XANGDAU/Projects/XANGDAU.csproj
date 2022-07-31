@@ -82,6 +82,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AbstractQRCode.cs" />
     <Compile Include="Dangkytaikhoan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,12 +100,6 @@
     </Compile>
     <Compile Include="Lichsu.Designer.cs">
       <DependentUpon>Lichsu.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Caidat.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Caidat.Designer.cs">
-      <DependentUpon>Caidat.cs</DependentUpon>
     </Compile>
     <Compile Include="Dangnhap.cs">
       <SubType>Form</SubType>
@@ -136,13 +131,15 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="QRCode.cs" />
+    <Compile Include="QRCodeData.cs" />
+    <Compile Include="QRCodeGenerator.cs" />
     <Compile Include="Sukien.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Sukien.Designer.cs">
       <DependentUpon>Sukien.cs</DependentUpon>
     </Compile>
-    <Compile Include="TankData.cs" />
     <Compile Include="Trangchu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -157,9 +154,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Lichsu.resx">
       <DependentUpon>Lichsu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Caidat.resx">
-      <DependentUpon>Caidat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dangnhap.resx">
       <DependentUpon>Dangnhap.cs</DependentUpon>
@@ -390,6 +384,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Logo_png.ico" />
+    <None Include="Pictures\Icon\Hust.png" />
     <None Include="Pictures\Icon White\phone icon.png" />
     <None Include="Pictures\Icon White\email icon.png" />
     <None Include="Pictures\XANGDAU Img\image9.png" />

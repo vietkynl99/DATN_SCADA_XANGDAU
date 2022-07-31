@@ -85,18 +85,19 @@ namespace XANGDAU
             this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(313, 807);
+            this.panel1.Size = new System.Drawing.Size(235, 656);
             this.panel1.TabIndex = 31;
             // 
             // label7
             // 
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(21, 348);
+            this.label7.Location = new System.Drawing.Point(16, 311);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(270, 140);
+            this.label7.Size = new System.Drawing.Size(202, 114);
             this.label7.TabIndex = 14;
             this.label7.Text = "PHẦN MỀM NHẬP XUẤT XĂNG DẦU";
             this.label7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -104,11 +105,11 @@ namespace XANGDAU
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(146)))), ((int)(((byte)(193)))));
-            this.pictureBox3.Image = global::XANGDAU.Properties.Resources.Logo_png;
-            this.pictureBox3.Location = new System.Drawing.Point(80, 188);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox3.Image = global::XANGDAU.Properties.Resources.Hust;
+            this.pictureBox3.Location = new System.Drawing.Point(70, 194);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(153, 158);
+            this.pictureBox3.Size = new System.Drawing.Size(94, 104);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 15;
             this.pictureBox3.TabStop = false;
@@ -118,9 +119,10 @@ namespace XANGDAU
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(373, 724);
+            this.label3.Location = new System.Drawing.Point(280, 588);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(163, 25);
+            this.label3.Size = new System.Drawing.Size(133, 20);
             this.label3.TabIndex = 34;
             this.label3.Text = "Đã có tài khoản? ";
             // 
@@ -128,10 +130,10 @@ namespace XANGDAU
             // 
             this.panelMove.Controls.Add(this.buttonMinimize);
             this.panelMove.Controls.Add(this.buttonClose);
-            this.panelMove.Location = new System.Drawing.Point(313, 0);
-            this.panelMove.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelMove.Location = new System.Drawing.Point(235, 0);
+            this.panelMove.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelMove.Name = "panelMove";
-            this.panelMove.Size = new System.Drawing.Size(593, 46);
+            this.panelMove.Size = new System.Drawing.Size(445, 37);
             this.panelMove.TabIndex = 33;
             this.panelMove.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelMove_MouseDown);
             // 
@@ -139,10 +141,10 @@ namespace XANGDAU
             // 
             this.buttonMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonMinimize.Image = global::XANGDAU.Properties.Resources.minimize_w40;
-            this.buttonMinimize.Location = new System.Drawing.Point(521, 4);
-            this.buttonMinimize.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonMinimize.Location = new System.Drawing.Point(391, 3);
+            this.buttonMinimize.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonMinimize.Name = "buttonMinimize";
-            this.buttonMinimize.Size = new System.Drawing.Size(33, 33);
+            this.buttonMinimize.Size = new System.Drawing.Size(25, 27);
             this.buttonMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.buttonMinimize.TabIndex = 21;
             this.buttonMinimize.TabStop = false;
@@ -152,10 +154,10 @@ namespace XANGDAU
             // 
             this.buttonClose.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonClose.Image = global::XANGDAU.Properties.Resources.close_w30;
-            this.buttonClose.Location = new System.Drawing.Point(557, 7);
-            this.buttonClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonClose.Location = new System.Drawing.Point(418, 6);
+            this.buttonClose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonClose.Name = "buttonClose";
-            this.buttonClose.Size = new System.Drawing.Size(27, 26);
+            this.buttonClose.Size = new System.Drawing.Size(20, 21);
             this.buttonClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.buttonClose.TabIndex = 20;
             this.buttonClose.TabStop = false;
@@ -167,9 +169,10 @@ namespace XANGDAU
             this.lbLogin.AutoSize = true;
             this.lbLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbLogin.LinkColor = System.Drawing.Color.White;
-            this.lbLogin.Location = new System.Drawing.Point(700, 724);
+            this.lbLogin.Location = new System.Drawing.Point(525, 588);
+            this.lbLogin.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbLogin.Name = "lbLogin";
-            this.lbLogin.Size = new System.Drawing.Size(108, 25);
+            this.lbLogin.Size = new System.Drawing.Size(88, 20);
             this.lbLogin.TabIndex = 32;
             this.lbLogin.TabStop = true;
             this.lbLogin.Text = "Đăng nhập";
@@ -184,10 +187,10 @@ namespace XANGDAU
             this.buttonDangky.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonDangky.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonDangky.ForeColor = System.Drawing.Color.White;
-            this.buttonDangky.Location = new System.Drawing.Point(380, 642);
-            this.buttonDangky.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonDangky.Location = new System.Drawing.Point(285, 522);
+            this.buttonDangky.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonDangky.Name = "buttonDangky";
-            this.buttonDangky.Size = new System.Drawing.Size(429, 52);
+            this.buttonDangky.Size = new System.Drawing.Size(322, 42);
             this.buttonDangky.TabIndex = 25;
             this.buttonDangky.Text = "Đăng ký";
             this.buttonDangky.UseVisualStyleBackColor = false;
@@ -200,11 +203,11 @@ namespace XANGDAU
             this.tbPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbPassword.ForeColor = System.Drawing.Color.DimGray;
             this.tbPassword.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.tbPassword.Location = new System.Drawing.Point(380, 263);
-            this.tbPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbPassword.Location = new System.Drawing.Point(285, 214);
+            this.tbPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbPassword.MaxLength = 25;
             this.tbPassword.Name = "tbPassword";
-            this.tbPassword.Size = new System.Drawing.Size(429, 23);
+            this.tbPassword.Size = new System.Drawing.Size(322, 19);
             this.tbPassword.TabIndex = 24;
             this.tbPassword.Text = "Password";
             this.tbPassword.Enter += new System.EventHandler(this.tbPassword_Enter);
@@ -215,9 +218,10 @@ namespace XANGDAU
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(400, 234);
+            this.label2.Location = new System.Drawing.Point(300, 190);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(99, 25);
+            this.label2.Size = new System.Drawing.Size(79, 20);
             this.label2.TabIndex = 23;
             this.label2.Text = "Mật khẩu:";
             // 
@@ -227,11 +231,11 @@ namespace XANGDAU
             this.tbUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbUsername.ForeColor = System.Drawing.Color.DimGray;
-            this.tbUsername.Location = new System.Drawing.Point(380, 175);
-            this.tbUsername.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbUsername.Location = new System.Drawing.Point(285, 142);
+            this.tbUsername.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbUsername.MaxLength = 25;
             this.tbUsername.Name = "tbUsername";
-            this.tbUsername.Size = new System.Drawing.Size(429, 23);
+            this.tbUsername.Size = new System.Drawing.Size(322, 19);
             this.tbUsername.TabIndex = 22;
             this.tbUsername.Text = "Username";
             this.tbUsername.Enter += new System.EventHandler(this.tbUsername_Enter);
@@ -242,9 +246,10 @@ namespace XANGDAU
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(375, 177);
+            this.label5.Location = new System.Drawing.Point(281, 144);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(408, 25);
+            this.label5.Size = new System.Drawing.Size(333, 20);
             this.label5.TabIndex = 29;
             this.label5.Text = "____________________________________";
             // 
@@ -253,9 +258,10 @@ namespace XANGDAU
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(375, 270);
+            this.label6.Location = new System.Drawing.Point(281, 219);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(408, 25);
+            this.label6.Size = new System.Drawing.Size(333, 20);
             this.label6.TabIndex = 30;
             this.label6.Text = "____________________________________";
             // 
@@ -264,9 +270,10 @@ namespace XANGDAU
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(399, 143);
+            this.label1.Location = new System.Drawing.Point(299, 116);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(151, 25);
+            this.label1.Size = new System.Drawing.Size(120, 20);
             this.label1.TabIndex = 21;
             this.label1.Text = "Tên đăng nhập:";
             // 
@@ -277,11 +284,11 @@ namespace XANGDAU
             this.tbRepeatPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbRepeatPassword.ForeColor = System.Drawing.Color.DimGray;
             this.tbRepeatPassword.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.tbRepeatPassword.Location = new System.Drawing.Point(380, 366);
-            this.tbRepeatPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbRepeatPassword.Location = new System.Drawing.Point(285, 297);
+            this.tbRepeatPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbRepeatPassword.MaxLength = 25;
             this.tbRepeatPassword.Name = "tbRepeatPassword";
-            this.tbRepeatPassword.Size = new System.Drawing.Size(429, 23);
+            this.tbRepeatPassword.Size = new System.Drawing.Size(322, 19);
             this.tbRepeatPassword.TabIndex = 36;
             this.tbRepeatPassword.Text = "Password";
             this.tbRepeatPassword.Enter += new System.EventHandler(this.tbRepeatPassword_Enter);
@@ -293,9 +300,10 @@ namespace XANGDAU
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(400, 336);
+            this.label4.Location = new System.Drawing.Point(300, 273);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(174, 25);
+            this.label4.Size = new System.Drawing.Size(140, 20);
             this.label4.TabIndex = 35;
             this.label4.Text = "Nhập lại mật khẩu:";
             // 
@@ -304,9 +312,10 @@ namespace XANGDAU
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(375, 372);
+            this.label8.Location = new System.Drawing.Point(281, 302);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(408, 25);
+            this.label8.Size = new System.Drawing.Size(333, 20);
             this.label8.TabIndex = 39;
             this.label8.Text = "____________________________________";
             // 
@@ -316,11 +325,11 @@ namespace XANGDAU
             this.tbFullName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbFullName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbFullName.ForeColor = System.Drawing.Color.DimGray;
-            this.tbFullName.Location = new System.Drawing.Point(381, 86);
-            this.tbFullName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbFullName.Location = new System.Drawing.Point(286, 70);
+            this.tbFullName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbFullName.MaxLength = 25;
             this.tbFullName.Name = "tbFullName";
-            this.tbFullName.Size = new System.Drawing.Size(429, 23);
+            this.tbFullName.Size = new System.Drawing.Size(322, 19);
             this.tbFullName.TabIndex = 41;
             this.tbFullName.Text = "Nguyễn Văn A";
             this.tbFullName.Enter += new System.EventHandler(this.tbFullName_Enter);
@@ -331,9 +340,10 @@ namespace XANGDAU
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(376, 89);
+            this.label9.Location = new System.Drawing.Point(282, 72);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(408, 25);
+            this.label9.Size = new System.Drawing.Size(333, 20);
             this.label9.TabIndex = 43;
             this.label9.Text = "____________________________________";
             // 
@@ -342,9 +352,10 @@ namespace XANGDAU
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(400, 54);
+            this.label10.Location = new System.Drawing.Point(300, 44);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(128, 25);
+            this.label10.Size = new System.Drawing.Size(101, 20);
             this.label10.TabIndex = 40;
             this.label10.Text = "Tên của bạn:";
             // 
@@ -354,11 +365,11 @@ namespace XANGDAU
             this.tbEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbEmail.ForeColor = System.Drawing.Color.DimGray;
-            this.tbEmail.Location = new System.Drawing.Point(380, 460);
-            this.tbEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbEmail.Location = new System.Drawing.Point(285, 374);
+            this.tbEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbEmail.MaxLength = 25;
             this.tbEmail.Name = "tbEmail";
-            this.tbEmail.Size = new System.Drawing.Size(429, 23);
+            this.tbEmail.Size = new System.Drawing.Size(322, 19);
             this.tbEmail.TabIndex = 45;
             this.tbEmail.Text = "nguyenvana@gmail.com";
             this.tbEmail.Enter += new System.EventHandler(this.tbEmail_Enter);
@@ -369,9 +380,10 @@ namespace XANGDAU
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(375, 463);
+            this.label11.Location = new System.Drawing.Point(281, 376);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(408, 25);
+            this.label11.Size = new System.Drawing.Size(333, 20);
             this.label11.TabIndex = 47;
             this.label11.Text = "____________________________________";
             // 
@@ -380,9 +392,10 @@ namespace XANGDAU
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(399, 428);
+            this.label12.Location = new System.Drawing.Point(299, 348);
+            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(66, 25);
+            this.label12.Size = new System.Drawing.Size(52, 20);
             this.label12.TabIndex = 44;
             this.label12.Text = "Email:";
             // 
@@ -392,11 +405,11 @@ namespace XANGDAU
             this.tbPhone.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbPhone.ForeColor = System.Drawing.Color.DimGray;
-            this.tbPhone.Location = new System.Drawing.Point(380, 564);
-            this.tbPhone.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbPhone.Location = new System.Drawing.Point(285, 458);
+            this.tbPhone.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbPhone.MaxLength = 25;
             this.tbPhone.Name = "tbPhone";
-            this.tbPhone.Size = new System.Drawing.Size(429, 23);
+            this.tbPhone.Size = new System.Drawing.Size(322, 19);
             this.tbPhone.TabIndex = 49;
             this.tbPhone.Text = "0123456789";
             this.tbPhone.Enter += new System.EventHandler(this.tbPhone_Enter);
@@ -407,9 +420,10 @@ namespace XANGDAU
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(375, 566);
+            this.label13.Location = new System.Drawing.Point(281, 460);
+            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(408, 25);
+            this.label13.Size = new System.Drawing.Size(333, 20);
             this.label13.TabIndex = 51;
             this.label13.Text = "____________________________________";
             // 
@@ -418,19 +432,20 @@ namespace XANGDAU
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(399, 532);
+            this.label14.Location = new System.Drawing.Point(299, 432);
+            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(132, 25);
+            this.label14.Size = new System.Drawing.Size(106, 20);
             this.label14.TabIndex = 48;
             this.label14.Text = "Số điện thoại:";
             // 
             // pictureBox7
             // 
             this.pictureBox7.Image = global::XANGDAU.Properties.Resources.phone_icon;
-            this.pictureBox7.Location = new System.Drawing.Point(376, 533);
-            this.pictureBox7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox7.Location = new System.Drawing.Point(282, 433);
+            this.pictureBox7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(27, 25);
+            this.pictureBox7.Size = new System.Drawing.Size(20, 20);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox7.TabIndex = 50;
             this.pictureBox7.TabStop = false;
@@ -438,10 +453,10 @@ namespace XANGDAU
             // pictureBox6
             // 
             this.pictureBox6.Image = global::XANGDAU.Properties.Resources.email_icon;
-            this.pictureBox6.Location = new System.Drawing.Point(380, 430);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox6.Location = new System.Drawing.Point(285, 349);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(21, 20);
+            this.pictureBox6.Size = new System.Drawing.Size(16, 16);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 46;
             this.pictureBox6.TabStop = false;
@@ -449,10 +464,10 @@ namespace XANGDAU
             // pictureBox5
             // 
             this.pictureBox5.Image = global::XANGDAU.Properties.Resources.user_icon_login;
-            this.pictureBox5.Location = new System.Drawing.Point(381, 55);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox5.Location = new System.Drawing.Point(286, 45);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(21, 20);
+            this.pictureBox5.Size = new System.Drawing.Size(16, 16);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 42;
             this.pictureBox5.TabStop = false;
@@ -463,10 +478,10 @@ namespace XANGDAU
             this.buttonHidePassword2.FlatAppearance.BorderSize = 0;
             this.buttonHidePassword2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonHidePassword2.Image = global::XANGDAU.Properties.Resources.eye2_w30_off;
-            this.buttonHidePassword2.Location = new System.Drawing.Point(771, 364);
-            this.buttonHidePassword2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonHidePassword2.Location = new System.Drawing.Point(578, 296);
+            this.buttonHidePassword2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonHidePassword2.Name = "buttonHidePassword2";
-            this.buttonHidePassword2.Size = new System.Drawing.Size(40, 28);
+            this.buttonHidePassword2.Size = new System.Drawing.Size(30, 23);
             this.buttonHidePassword2.TabIndex = 38;
             this.buttonHidePassword2.UseVisualStyleBackColor = true;
             this.buttonHidePassword2.Click += new System.EventHandler(this.buttonHidePassword2_Click);
@@ -474,10 +489,10 @@ namespace XANGDAU
             // pictureBox4
             // 
             this.pictureBox4.Image = global::XANGDAU.Properties.Resources.password_w50;
-            this.pictureBox4.Location = new System.Drawing.Point(380, 337);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox4.Location = new System.Drawing.Point(285, 274);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(21, 20);
+            this.pictureBox4.Size = new System.Drawing.Size(16, 16);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 37;
             this.pictureBox4.TabStop = false;
@@ -488,10 +503,10 @@ namespace XANGDAU
             this.buttonHidePassword1.FlatAppearance.BorderSize = 0;
             this.buttonHidePassword1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonHidePassword1.Image = global::XANGDAU.Properties.Resources.eye2_w30_off;
-            this.buttonHidePassword1.Location = new System.Drawing.Point(771, 262);
-            this.buttonHidePassword1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonHidePassword1.Location = new System.Drawing.Point(578, 213);
+            this.buttonHidePassword1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonHidePassword1.Name = "buttonHidePassword1";
-            this.buttonHidePassword1.Size = new System.Drawing.Size(40, 28);
+            this.buttonHidePassword1.Size = new System.Drawing.Size(30, 23);
             this.buttonHidePassword1.TabIndex = 28;
             this.buttonHidePassword1.UseVisualStyleBackColor = true;
             this.buttonHidePassword1.Click += new System.EventHandler(this.buttonHidePassword1_Click);
@@ -499,10 +514,10 @@ namespace XANGDAU
             // pictureBox2
             // 
             this.pictureBox2.Image = global::XANGDAU.Properties.Resources.password_w50;
-            this.pictureBox2.Location = new System.Drawing.Point(380, 235);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox2.Location = new System.Drawing.Point(285, 191);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(21, 20);
+            this.pictureBox2.Size = new System.Drawing.Size(16, 16);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 27;
             this.pictureBox2.TabStop = false;
@@ -510,20 +525,20 @@ namespace XANGDAU
             // pictureBox1
             // 
             this.pictureBox1.Image = global::XANGDAU.Properties.Resources.user_icon_login;
-            this.pictureBox1.Location = new System.Drawing.Point(380, 144);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(285, 117);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(21, 20);
+            this.pictureBox1.Size = new System.Drawing.Size(16, 16);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 26;
             this.pictureBox1.TabStop = false;
             // 
             // DangkytaikhoanForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(50)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(907, 807);
+            this.ClientSize = new System.Drawing.Size(680, 656);
             this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.tbPhone);
             this.Controls.Add(this.label13);
@@ -557,7 +572,6 @@ namespace XANGDAU
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "DangkytaikhoanForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dangkytaikhoan";

@@ -27,23 +27,8 @@ namespace XANGDAU
             GlobalData.FrmMain = this;
             //hiển thị thông tin người sử dụng
             lbFullName.Text = GlobalData.FullName;
-            if (GlobalData.UserLevel == "ADMIN")
-            {
-                lbUserLevel.Text = "ADMIN";
-                lbUserLevel.ForeColor = Color.FromArgb(233, 206, 133);
-                picCrown.Visible = true;
-            }
-            else
-            {
-                lbUserLevel.Text = "OPERATOR";
-                lbUserLevel.ForeColor = Color.WhiteSmoke;
-                picCrown.Visible = false;
-            }
             //lưu event
             GlobalFunction.InsertEventToSQL("Vận hành", "Tài khoản " + GlobalData.UserName + ": đăng nhập vào hệ thống với quyền " + GlobalData.UserLevel);
-            //chạy timer
-            DataTimer.Start();
-            UpdateSystemStatus();
             //lưu lại giá trị màu cũ
             OldColor = MenuTrangchu.BackColor;
             //mở form cài đặt để tự động kết nối với PLC
@@ -61,8 +46,8 @@ namespace XANGDAU
         //form nào được mở thì nút đó sẽ sáng (index:1->5)
         private void UpdateSelectFormButton(int index)  
         {
-            Button[] menuButton = { MenuTrangchu, MenuLichsu, MenuSukien, MenuCaidat };
-            for (int i = 0; i < 4; i++)
+            Button[] menuButton = { MenuTrangchu, MenuLichsu, MenuSukien };
+            for (int i = 0; i < 3; i++)
             {
                 if (i == index - 1)
                     menuButton[i].BackColor = NewColor;
@@ -92,8 +77,6 @@ namespace XANGDAU
                 GlobalData.FrmLichsu.Hide();
             if (GlobalData.FrmSukien != null)
                 GlobalData.FrmSukien.Hide();
-            if (GlobalData.FrmCaidat != null)
-                GlobalData.FrmCaidat.Hide();
             //mở form cần mở
             //nếu chưa được khởi tạo (đang = null) thì khởi tạo mới
             switch(index)
@@ -113,14 +96,7 @@ namespace XANGDAU
                         GlobalData.FrmSukien = new SukienForm();
                     InsertForm(GlobalData.FrmSukien);
                     break;
-                case 4:
-                    if (GlobalData.FrmCaidat == null)
-                        GlobalData.FrmCaidat = new CaidatForm();
-                    InsertForm(GlobalData.FrmCaidat);
-                    break;
             }
-
-            UpdateSystemStatus();
         }
 
 
@@ -136,10 +112,6 @@ namespace XANGDAU
         {
             OpenForm(3);
         }
-        private void MenuCaidat_Click(object sender, EventArgs e)
-        {
-            OpenForm(4);
-        }
 
 
         private void buttonClose_Click(object sender, EventArgs e)
@@ -147,16 +119,6 @@ namespace XANGDAU
             DialogResult result = MessageBox.Show("Bạn có muốn thoát chương trình không?", "Thoát ứng dụng", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (result == DialogResult.Yes)
             {
-                //ngat ket noi voi plc
-                if (GlobalData.plcConnectd)
-                {
-                    if (GlobalData.plc.IsConnected)
-                        GlobalData.plc.Close();
-                }   
-                //lưu Event
-                GlobalFunction.InsertEventToSQL("Vận hành", "Tài khoản " + GlobalData.UserName+": đăng xuất khỏi hệ thống");
-                if(GlobalData.SystemRunning)
-                    GlobalFunction.InsertEventToSQL("Vận hành", "Hệ thống dừng lại");
                 //exit
                 Application.Exit();
             }
@@ -221,77 +183,7 @@ namespace XANGDAU
         }
 
 
-        //kiểm tra trạng thái của hệ thống
-        private void UpdateSystemStatus()
-        {
-            //được phép chạy
-            if (GlobalData.SystemEnable)
-            {
-                // chưa kết nối
-                if (!GlobalData.plcConnectd) 
-                    GlobalData.SystemRunning = false;
-                // đã kết nối
-                else
-                    GlobalData.SystemRunning = GlobalData.CheckData;
-            }
-            //ko cho phép chạy
-            else
-            {
-                GlobalData.SystemRunning = false;
-            }    
-        }
-
-
-        //sau mỗi khoảng thời gian đơn vị thì lấy giá trị từ cảm biến 1 lần
-        private void DataTimer_Tick(object sender, EventArgs e)
-        {
-            if(GlobalData.plcConnectd)
-            {
-                //get data từ PLC
-                try
-                {
-                    switch(GlobalData.TankIndex)
-                    {
-                        case 0: 
-                        case 1:
-                            GlobalData.Diezel.ReadData();
-                            break;
-                        case 2: 
-                        case 3:
-                            GlobalData.RON92.ReadData();
-                            break;
-                        case 4:
-                        case 5:
-                            GlobalData.RON95.ReadData();
-                            break;
-                        default:
-                            GlobalData.E100.ReadData();
-                            GlobalData.RON92.ReadData();
-                            GlobalData.E5.ReadData();
-                            break;
-
-                    }
-
-                    GlobalData.CheckData = true;
-                }
-                catch(Exception ex)
-                {
-                    //hiển thị thông báo trong lần đầu bị lỗi
-                    if (GlobalData.CheckData)
-                    {
-                        GlobalFunction.InsertEventToSQL("Lỗi", ex.Message);
-                        GlobalData.CheckData = false;
-                        //GlobalData.plc.Close();
-                        //GlobalData.plcConnectd = false;
-                        MessageBox.Show(ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                    GlobalData.CheckData = false;
-                }               
-            }
-
-            UpdateSystemStatus();
-        }
-
+ 
 
     }
 }

@@ -114,7 +114,6 @@ namespace XANGDAU
             }
             catch (Exception ex)
             {
-                GlobalData.SystemEnable = false;
                 MessageBox.Show("Lỗi kết nối với SQL Server: " + ex.Message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
@@ -181,10 +180,10 @@ namespace XANGDAU
                 MessageBox.Show("Không có dữ liệu được tìm thấy!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        //tự động làm mới dữ liệu sau 5 lần thời gian đơn vị
+        //tự động làm mới dữ liệu
         private void AutoRefreshTimer_Tick(object sender, EventArgs e)
         {
-            if (GlobalData.SystemRunning && cbAutoRefresh.Checked)
+            if (cbAutoRefresh.Checked)
                 UploadToListView();
         }
 
@@ -289,7 +288,6 @@ namespace XANGDAU
             }
             catch (Exception ex)
             {
-                GlobalData.SystemEnable = false;
                 MessageBox.Show("Lỗi kết nối với SQL Server: " + ex.Message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             //trả về số kết quả đã xóa

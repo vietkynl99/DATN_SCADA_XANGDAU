@@ -38,7 +38,6 @@ namespace XANGDAU
             }
             catch (Exception ex)
             {
-                GlobalData.SystemEnable = false;
                 MessageBox.Show("Lỗi kết nối với SQL Server: " + ex.Message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return -1;
             }
