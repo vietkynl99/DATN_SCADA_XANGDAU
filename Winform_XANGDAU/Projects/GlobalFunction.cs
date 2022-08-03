@@ -78,7 +78,10 @@ namespace XANGDAU
         public static int ReadLastIDSQL(string tablename)
         {
             SqlDataReader data = ReadDataFromSQL("Id", tablename, "ORDER BY Id DESC");
-            return (int)data[0];
+            if (data != null)
+                return (int)data[0];
+            else
+                return 0;
         }
 
         //chèn thêm dữ liệu vào bảng

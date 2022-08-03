@@ -234,7 +234,8 @@ namespace XANGDAU
                 {
                     int n = DeleteDataSQL("LichsuHD", DateTimeDelete);
                     GlobalFunction.InsertEventToSQL("Vận hành", "Tài khoản " + GlobalData.UserName + ": đã xóa " + n.ToString() + " dữ liệu từ " + DateTimeDelete + " trở về trước");
-                    MessageBox.Show("Đã xóa " + n.ToString() + " dữ liệu!", "Xóa dữ liệu", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    if(n != 0)
+                        MessageBox.Show("Đã xóa " + n.ToString() + " dữ liệu!", "Xóa dữ liệu", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
         }

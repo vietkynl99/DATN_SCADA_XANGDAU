@@ -28,7 +28,7 @@ namespace XANGDAU
             //hiển thị thông tin người sử dụng
             lbFullName.Text = GlobalData.FullName;
             //lưu event
-            GlobalFunction.InsertEventToSQL("Vận hành", "Tài khoản " + GlobalData.UserName + ": đăng nhập vào hệ thống với quyền " + GlobalData.UserLevel);
+            GlobalFunction.InsertEventToSQL("Vận hành", "Tài khoản " + GlobalData.UserName + ": đăng nhập vào hệ thống.");
             //lưu lại giá trị màu cũ
             OldColor = MenuTrangchu.BackColor;
             //mở form cài đặt để tự động kết nối với PLC
@@ -64,6 +64,7 @@ namespace XANGDAU
             this.panelContent.Controls.Add(f);
             f.Show();
         }
+
         //mở form: đóng form khác và mở form mới + update lại cài đặt (index:1->4)
         private void OpenForm(int index)
         {
@@ -98,8 +99,6 @@ namespace XANGDAU
                     break;
             }
         }
-
-
         private void MenuTrangchu_Click(object sender, EventArgs e)
         {
             OpenForm(1);
@@ -119,6 +118,8 @@ namespace XANGDAU
             DialogResult result = MessageBox.Show("Bạn có muốn thoát chương trình không?", "Thoát ứng dụng", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (result == DialogResult.Yes)
             {
+                //lưu event
+                GlobalFunction.InsertEventToSQL("Vận hành", "Tài khoản " + GlobalData.UserName + ": đăng xuất khỏi hệ thống.");
                 //exit
                 Application.Exit();
             }
