@@ -11,7 +11,6 @@
                 <i class="bi bi-droplet-half" style="background: #7380ec;"></i>
                 <span class="title_Tank">Họng 1 - Diezel Tank 1</span>
             </div>
-            <a href="../App_Data/Database_XangDau.mdf">../App_Data/Database_XangDau.mdf</a>
             <div class="tank">     
                 <img src="../Images/Scada_OneTank.PNG" alt="" class="box">
                 <div class="symbol">
